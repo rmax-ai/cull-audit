@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cull-audit"
+dynamic = ["version"]
+description = "A local-first verification harness for AI photo-culling pipelines."
+requires-python = ">=3.11"
+dependencies = ["Pillow"]
+
+[project.scripts]
+cull-audit = "cull_audit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.dynamic]
+version = {attr = "cull_audit.__version__"}
