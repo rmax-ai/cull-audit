@@ -1,0 +1,1 @@
+{"schema_version":"1.0","records":[{"record_id":"bad-verdict","photo_id":"photo.jpg","stage":"triage","read_kind":"relative","verdict":"unknown","source":{"tool":"fixture-culler"}}]}

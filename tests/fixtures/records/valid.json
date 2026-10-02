@@ -1,0 +1,192 @@
+{
+  "schema_version": "1.0",
+  "producer_metadata": {
+    "fixture": "contract-v1"
+  },
+  "records": [
+    {
+      "record_id": "triage/000001",
+      "photo_id": "set-a/IMG_0001.jpg",
+      "stage": "triage",
+      "read_kind": "relative",
+      "verdict": "accept",
+      "composite": 82.5,
+      "scores": {
+        "technical": 80,
+        "composition": 85
+      },
+      "reasons": [
+        "clean silhouette"
+      ],
+      "kill_factors": [],
+      "context": {
+        "comparison_group": "sheet-01",
+        "repeat_group": null,
+        "repeat_index": null,
+        "input_max_edge_px": 768,
+        "prompt_id": "triage-v1",
+        "model": "fixture-model",
+        "settings_fingerprint": "sha256:fixture"
+      },
+      "usage": {
+        "input_tokens": 1000,
+        "output_tokens": 120,
+        "thinking_tokens": 80,
+        "calls": 1,
+        "cost": {
+          "currency": "USD",
+          "total": 0.0042,
+          "source": "provider"
+        }
+      },
+      "source": {
+        "tool": "fixture-culler",
+        "tool_version": "1.0.0"
+      },
+      "observed_at": "2026-01-01T00:00:00Z",
+      "future_metadata": {
+        "kept": true
+      }
+    },
+    {
+      "record_id": "dedicated/000001",
+      "photo_id": "set-a/IMG_0001.jpg",
+      "stage": "dedicated",
+      "read_kind": "absolute",
+      "verdict": "maybe",
+      "composite": 72.5,
+      "scores": {
+        "technical": 70,
+        "composition": 75
+      },
+      "reasons": [
+        "edge softness"
+      ],
+      "kill_factors": [
+        "focus"
+      ],
+      "context": {
+        "comparison_group": "sheet-01",
+        "input_max_edge_px": 1536,
+        "prompt_id": "dedicated-v1",
+        "model": "fixture-model",
+        "settings_fingerprint": "sha256:fixture-dedicated"
+      },
+      "usage": {
+        "input_tokens": 1200,
+        "output_tokens": 100,
+        "calls": 1
+      },
+      "source": {
+        "tool": "fixture-culler"
+      }
+    },
+    {
+      "record_id": "triage/000002",
+      "photo_id": "set-a/IMG_0002.jpg",
+      "stage": "triage",
+      "read_kind": "relative",
+      "verdict": "maybe",
+      "composite": 65,
+      "scores": {
+        "technical": 65,
+        "composition": 66
+      },
+      "context": {
+        "comparison_group": "sheet-01",
+        "settings_fingerprint": "sha256:fixture"
+      },
+      "source": {
+        "tool": "fixture-culler"
+      }
+    },
+    {
+      "record_id": "dedicated/000002",
+      "photo_id": "set-a/IMG_0002.jpg",
+      "stage": "dedicated",
+      "read_kind": "absolute",
+      "verdict": "accept",
+      "composite": 88,
+      "context": {
+        "comparison_group": "sheet-01",
+        "settings_fingerprint": "sha256:fixture-dedicated"
+      },
+      "source": {
+        "tool": "fixture-culler"
+      }
+    },
+    {
+      "record_id": "triage/000003",
+      "photo_id": "set-a/IMG_0003.jpg",
+      "stage": "triage",
+      "read_kind": "relative",
+      "verdict": "maybe",
+      "composite": 54,
+      "usage": {
+        "calls": 1
+      },
+      "source": {
+        "tool": "fixture-culler"
+      }
+    },
+    {
+      "record_id": "dedicated/000003",
+      "photo_id": "set-a/IMG_0003.jpg",
+      "stage": "dedicated",
+      "read_kind": "absolute",
+      "verdict": "reject",
+      "composite": 20,
+      "source": {
+        "tool": "fixture-culler"
+      }
+    },
+    {
+      "record_id": "repeat/000004-a",
+      "photo_id": "set-b/IMG_0004.jpg",
+      "stage": "dedicated",
+      "read_kind": "absolute",
+      "verdict": "maybe",
+      "composite": 70,
+      "context": {
+        "repeat_group": "repeat-0004",
+        "repeat_index": 0,
+        "settings_fingerprint": "sha256:repeat"
+      },
+      "source": {
+        "tool": "fixture-culler"
+      }
+    },
+    {
+      "record_id": "repeat/000004-b",
+      "photo_id": "set-b/IMG_0004.jpg",
+      "stage": "dedicated",
+      "read_kind": "absolute",
+      "verdict": "maybe",
+      "composite": 73,
+      "context": {
+        "repeat_group": "repeat-0004",
+        "repeat_index": 1,
+        "settings_fingerprint": "sha256:repeat"
+      },
+      "source": {
+        "tool": "fixture-culler"
+      }
+    },
+    {
+      "record_id": "repeat/000004-c",
+      "photo_id": "set-b/IMG_0004.jpg",
+      "stage": "dedicated",
+      "read_kind": "absolute",
+      "verdict": "accept",
+      "composite": 76,
+      "context": {
+        "repeat_group": "repeat-0004",
+        "repeat_index": 2,
+        "settings_fingerprint": "sha256:repeat"
+      },
+      "source": {
+        "tool": "fixture-culler"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"schema_version":"1.0","records":[{"record_id":"nonfinite","photo_id":"photo.jpg","stage":"triage","read_kind":"relative","verdict":"maybe","composite":1e999,"source":{"tool":"fixture-culler"}}]}

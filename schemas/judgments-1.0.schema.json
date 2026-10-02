@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cull-audit.example/schemas/judgments-1.0.schema.json",
+  "title": "cull-audit judgment records",
+  "type": "object",
+  "required": ["schema_version", "records"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "records": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/record"}
+    }
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "record": {
+      "type": "object",
+      "required": ["record_id", "photo_id", "stage", "read_kind", "verdict", "source"],
+      "properties": {
+        "record_id": {"type": "string", "minLength": 1},
+        "photo_id": {"type": "string", "minLength": 1},
+        "stage": {"type": "string", "minLength": 1},
+        "read_kind": {"enum": ["relative", "absolute", "face_crop", "other"]},
+        "verdict": {"enum": ["accept", "maybe", "reject"]},
+        "composite": {"type": "number", "minimum": 0, "maximum": 100},
+        "scores": {
+          "type": "object",
+          "additionalProperties": {"type": "number", "minimum": 0, "maximum": 100}
+        },
+        "reasons": {"type": "array", "items": {"type": "string"}},
+        "kill_factors": {"type": "array", "items": {"type": "string"}},
+        "context": {
+          "type": ["object", "null"],
+          "properties": {
+            "comparison_group": {"type": ["string", "null"]},
+            "repeat_group": {"type": ["string", "null"]},
+            "repeat_index": {"type": ["integer", "null"], "minimum": 0},
+            "input_max_edge_px": {"type": ["integer", "null"], "minimum": 1},
+            "prompt_id": {"type": ["string", "null"]},
+            "model": {"type": ["string", "null"]},
+            "settings_fingerprint": {"type": ["string", "null"]}
+          },
+          "additionalProperties": true
+        },
+        "usage": {
+          "type": ["object", "null"],
+          "properties": {
+            "input_tokens": {"type": ["integer", "null"], "minimum": 0},
+            "output_tokens": {"type": ["integer", "null"], "minimum": 0},
+            "thinking_tokens": {"type": ["integer", "null"], "minimum": 0},
+            "calls": {"type": "integer", "minimum": 0},
+            "cost": {"$ref": "#/$defs/cost"}
+          },
+          "additionalProperties": true
+        },
+        "source": {
+          "type": "object",
+          "required": ["tool"],
+          "properties": {
+            "tool": {"type": "string", "minLength": 1},
+            "tool_version": {"type": "string"}
+          },
+          "additionalProperties": true
+        },
+        "observed_at": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "cost": {
+      "type": "object",
+      "required": ["currency", "total", "source"],
+      "properties": {
+        "currency": {"type": "string", "minLength": 1},
+        "total": {"type": "number", "minimum": 0},
+        "source": {"type": "string", "minLength": 1},
+        "components": {
+          "type": "object",
+          "additionalProperties": {"type": "number", "minimum": 0}
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}

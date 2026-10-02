@@ -1,0 +1,1 @@
+{"schema_version":"1.0","records":[{"record_id":"same","photo_id":"a.jpg","stage":"triage","read_kind":"relative","verdict":"maybe","source":{"tool":"x"}},{"record_id":"same","photo_id":"b.jpg","stage":"triage","read_kind":"relative","verdict":"accept","source":{"tool":"x"}}]}
