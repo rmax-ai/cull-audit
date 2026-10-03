@@ -299,6 +299,10 @@ python tools/lint.py
 python -m unittest discover -s tests -v
 ```
 
+This is the `v0.1.0` release. See
+[`CONTRIBUTING.md`](CONTRIBUTING.md) for the development and review process and
+[`SECURITY.md`](SECURITY.md) for private vulnerability reporting.
+
 This project is distributed under the MIT License. See
 [`LICENSE`](LICENSE). The demo data is synthetic and does not derive from a
 private photo shoot.

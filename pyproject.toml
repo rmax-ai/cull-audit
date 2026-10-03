@@ -6,6 +6,9 @@ build-backend = "setuptools.build_meta"
 name = "cull-audit"
 dynamic = ["version"]
 description = "A local-first verification harness for AI photo-culling pipelines."
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [{name = "R Max Espinoza"}]
 requires-python = ">=3.11"
 dependencies = ["Pillow"]
 

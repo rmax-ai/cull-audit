@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+title: "cull-audit"
+type: software
+authors:
+  - name: "R Max Espinoza"
+version: 0.1.0
+license: MIT
+repository-code: "https://github.com/rmax-ai/cull-audit"

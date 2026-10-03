@@ -1,0 +1,45 @@
+name: Bug report
+description: Report a reproducible problem in cull-audit.
+title: "[bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Keep reports within the audit-not-judge scope. Remove private data,
+        credentials, and private photo or record content before submitting.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Which released version or commit shows the problem?
+      placeholder: v0.1.0
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction
+      description: Give the smallest safe input and the commands that reproduce the problem.
+      placeholder: |
+        1. Run ...
+        2. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behavior
+      description: State what should happen and what happened instead.
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope and safety
+      options:
+        - label: I removed secrets, private photos, and private records from this report.
+          required: true
+        - label: I checked README §9 and believe this report is within scope.
+          required: true

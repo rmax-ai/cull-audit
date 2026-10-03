@@ -39,16 +39,19 @@ billed call of their own) — known records are zero.
 Commands were run from the repository root. The dry-run and live output paths
 were confirmed absent before use; no destructive cleanup command was used.
 The API key was loaded into `CULL_AUDIT_GEMINI_API_KEY` at run time from the
-operator secret store (`pass`, entry `hermes/gemini/api-key`); the value was
-never written to disk or logs (verified by scan).
+operator's secret store; the value was never written to disk or logs (verified
+by scan). For the public release, operator-local paths and environment
+wrappers in this note and in the committed `audit.json` / `report.md` were
+normalized (2026-10-03); parameters, values, and records are unchanged.
 
 ```bash
-.venv-accept/bin/python tools/open_demo_fetch.py verify \
+WORKDIR=/path/to/demo-workspace   # photos/, run/, price-table.json live here
+python tools/open_demo_fetch.py verify \
   --manifest examples/open-demo/manifest.json \
-  --dir /home/rmax-10/.local/share/cullaudit-opendemo/photos
+  --dir "$WORKDIR/photos"
 
-.venv-accept/bin/cull-audit reference run \
-  --photos /home/rmax-10/.local/share/cullaudit-opendemo/photos \
+cull-audit reference run \
+  --photos "$WORKDIR/photos" \
   --output /tmp/ca-t11-dry-check \
   --model gemini-3-flash-preview \
   --passes triage,dedicated,face,repeat \
@@ -56,25 +59,25 @@ never written to disk or logs (verified by scan).
   --repeat-top 8 \
   --dry-run
 
-# load CULL_AUDIT_GEMINI_API_KEY from the operator secret store, then:
-.venv-accept/bin/cull-audit reference run \
-  --photos /home/rmax-10/.local/share/cullaudit-opendemo/photos \
-  --output /home/rmax-10/.local/share/cullaudit-opendemo/run \
+# load CULL_AUDIT_GEMINI_API_KEY from your secret store, then:
+cull-audit reference run \
+  --photos "$WORKDIR/photos" \
+  --output "$WORKDIR/run" \
   --model gemini-3-flash-preview \
   --passes triage,dedicated,face,repeat \
   --finalists 21 \
   --repeat-top 8
 
-.venv-accept/bin/cull-audit validate \
-  --judgments /home/rmax-10/.local/share/cullaudit-opendemo/run/judgments.json
+cull-audit validate \
+  --judgments "$WORKDIR/run/judgments.json"
 
-.venv-accept/bin/cull-audit audit \
-  --judgments /home/rmax-10/.local/share/cullaudit-opendemo/run/judgments.json \
+cull-audit audit \
+  --judgments "$WORKDIR/run/judgments.json" \
   --baseline-stage triage \
   --decisive-stage dedicated \
-  --photos /home/rmax-10/.local/share/cullaudit-opendemo/photos \
-  --prices /home/rmax-10/.local/share/cullaudit-opendemo/price-table.json \
-  --output /home/rmax-10/.local/share/cullaudit-opendemo/run/audit \
+  --photos "$WORKDIR/photos" \
+  --prices "$WORKDIR/price-table.json" \
+  --output "$WORKDIR/run/audit" \
   --source-date-epoch 1791029022
 ```
 

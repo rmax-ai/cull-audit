@@ -215,7 +215,7 @@ Repeat stability uses profile v1: unstable for accept/reject disagreement or hig
 ## Provenance
 
 - Schema version: 1.0
-- Tool: cull\-audit 0.1.0.dev0
+- Tool: cull\-audit 0.1.0
 - Input SHA-256: e10884fc7b7cb7a8d9adc5daaafc609da7c4c4b28ea64cd23e0059c7656fd0b9
 - Generated at: 2023\-11\-14T22:13:20Z
 - Photo root: —

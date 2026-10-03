@@ -1,0 +1,42 @@
+name: Feature request
+description: Propose a focused change to the verification harness.
+title: "[feature] "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe a verification, contract, reproducibility, privacy, or
+        documentation need. Requests to build an artistic culler are outside
+        the project's stated scope.
+  - type: input
+    id: problem
+    attributes:
+      label: Problem
+      description: What user or maintainer problem should this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Describe the smallest useful change and its interface.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and alternatives
+      description: Give a fixture, command, example, or reason existing behavior is insufficient.
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope and safety
+      options:
+        - label: I checked README §9 and believe this request is within scope.
+          required: true
+        - label: I will keep the change local-first and avoid adding secrets or telemetry.
+          required: true

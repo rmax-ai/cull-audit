@@ -1342,4 +1342,4 @@ Repeat stability uses profile v1: unstable for accept/reject disagreement or hig
 - Tool: cull\-audit 0.1.0.dev0
 - Input SHA-256: 7553ec39eb24d4c3d2d53adb8fd62cd5d2a33ecd36e3d561da2f23b6758e1448
 - Generated at: 2026\-10\-03T12:03:42Z
-- Photo root: /home/rmax\-10/.local/share/cullaudit\-opendemo/photos
+- Photo root: <demo-workspace>/photos
