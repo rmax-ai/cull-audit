@@ -15,7 +15,13 @@
       </div>
     </div>
     <div>
-      <p class="text-lg leading-8 text-slate-300">{meta.study.pipeline}</p>
+      <p class="eyebrow">{meta.study.foundLabel}</p>
+      <ul class="mt-3 space-y-1 font-mono text-sm leading-6 text-slate-200">
+        {#each meta.study.found as line}
+          <li>{line}</li>
+        {/each}
+      </ul>
+      <p class="mt-7 text-lg leading-8 text-slate-300">{meta.study.pipeline}</p>
       <div class="mt-8 grid gap-4 border-y border-slate-800 py-5 font-mono text-xs sm:grid-cols-2">
         <div>
           <span class="block text-slate-500">model</span>
@@ -27,6 +33,10 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="mt-14 overflow-x-auto rounded-xl border border-slate-800 bg-slate-950/60 p-3 sm:p-5">
+    <img src={`${base}/pipeline.svg`} alt="Diagram of the four audit passes from 77 photos to repeat reads" class="w-full min-w-[720px]" />
+    <p class="mt-2 font-mono text-[10px] text-slate-500 md:hidden">Scroll horizontally to see the full diagram ↗</p>
   </div>
   <div class="mt-12 rounded-xl border border-slate-800 bg-slate-900/40 p-6 sm:p-8">
     <p class="eyebrow">{dataset.label}</p>
@@ -48,8 +58,5 @@
       {/each}
     </dl>
   </div>
-  <div class="mt-14 overflow-x-auto rounded-xl border border-slate-800 bg-slate-950/60 p-3 sm:p-5">
-    <img src={`${base}/pipeline.svg`} alt="Diagram of the four audit passes from 77 photos to repeat reads" class="w-full min-w-[720px]" />
-  </div>
-  <p class="mt-5 max-w-4xl font-mono text-[11px] leading-6 text-slate-500">{meta.study.provenance}</p>
+  <p class="mt-5 max-w-4xl font-mono text-xs leading-6 text-slate-400">{meta.study.provenance}</p>
 </Section>

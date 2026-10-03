@@ -11,6 +11,7 @@ export type Flip = {
   to: Verdict;
   image: string;
   page: string;
+  headline?: boolean;
 };
 
 export const attribution = {
@@ -23,9 +24,9 @@ export const attribution = {
 export const meta = {
   hero: {
     kicker: "cull-audit · public demo study",
-    title: "The number-one pick became a reject.",
+    title: "A top-scoring pick became a reject.",
     sub:
-      "A local-first audit of a 67-call reference run on an openly licensed photo set — where relative reads flip, why ranking is not stability, and what the skepticism actually cost. An audit layer, not another judge.",
+      "A local-first verification harness for records from AI photo-culling pipelines: bring JSON/JSONL judgments and it writes a flip table, repeat-stability classes, and cost evidence to audit.json and report.md. The study below audits one 67-call reference run on an openly licensed photo set — an example produced with the optional runner.",
     links: {
       study: "Read the study ↓",
       tool: "Get the tool ↗",
@@ -45,24 +46,30 @@ export const meta = {
   ],
   problem: {
     first:
-      "Every AI culling pipeline emits scores, and teams read the top of the list as fact. cull-audit asks a narrower, answerable question: what do the records actually say — and what happens when the same question is asked again, alone and at higher resolution?",
+      "AI culling pipelines often expose scores and rankings that invite more confidence than a single read warrants. cull-audit asks a narrower, answerable question: what do the records actually say — and what happens when the same question is asked again, alone and at higher resolution?",
     second:
       "It audits what a culler's records say about stage disagreement, repeat stability, and cost. It never claims human ground truth."
   },
   study: {
     label: "What was run",
+    foundLabel: "What this run found",
+    found: [
+      "6 of 21 paired finalists flipped downward",
+      "8/8 eligible repeat groups robust",
+      "$0.273687 estimated across 67 calls"
+    ],
     pipeline:
-      "77 openly licensed photos (Wikimedia Commons, CC BY 2.0) → 9 nine-up contact sheets (triage reads, relative context) → 21 dedicated reads (1536 px, one photo each) → 21 face crops (enrichment) → 16 repeat reads (8 groups × 2, identical settings).",
+      "77 openly licensed photos (Wikimedia Commons, CC BY 2.0) → nine contact sheets, up to nine photos each (triage reads, relative context) → 21 dedicated reads (1536 px, one photo each) → 21 face crops (enrichment) → 16 repeat reads (8 groups × 2, identical settings).",
     model: "gemini-3-flash-preview",
     calls: "67 provider calls, 135 judgment records, 34m23s wall clock.",
     provenance:
       "Every number on this page reproduces from the frozen artifacts in the repository: examples/open-demo/run-2026-10-03 (audit.json, report.md, RUN-NOTES.md)."
   },
   flips: {
-    title: "Relative reads flatter.",
+    title: "Six finalists fell on a dedicated read.",
     copy:
-      "The triage pass judges a photo inside a 9-up sheet; the dedicated pass reads each finalist alone. Of 21 paired finalists, 6 flipped — every one downward: 2 accept→reject, 4 accept→maybe; 15 stayed accept.",
-    intro: "The six flips, with the actual photographs:",
+      "The triage pass judges a photo inside a contact sheet; the dedicated pass reads each finalist alone, at higher resolution. Of the 21 paired finalists (all triage accepts), 6 flipped — every one downward: 2 accept→reject, 4 accept→maybe; 15 stayed accept. The other 56 photos had no dedicated comparison. This run shows the disagreement; it does not isolate whether sheet context, resolution, or other stage differences caused any single change.",
+    intro: "The six flips, with the actual photographs — scores are composites (0–100):",
     transitions: [
       { count: 15, from: "accept", to: "accept", tone: "slate" },
       { count: 4, from: "accept", to: "maybe", tone: "amber" },
@@ -72,31 +79,53 @@ export const meta = {
   stability: {
     title: "Ranking is not stability.",
     copy:
-      "The top eight finalists were read twice under identical settings. All 8 groups came back robust — identical verdicts, composite spread within the v1 threshold (mostly 0; one spread of 3, still robust). A verdict that survives a re-read is evidence; a rank position is not.",
-    spreads: [0, 0, 0, 0, 0, 0, 0, 3]
+      "The top eight finalists were read twice under identical settings. All eight came back robust: identical verdicts, composite spread within the v1 threshold (mostly 0; one spread of 3). A verdict that survives a re-read is evidence; a rank position is not.",
+    metric: "two reads per selected photo · identical verdicts · composite spread ≤ 5 under v1",
+    boundary:
+      "This tests only these two configured repeats for these eight photos — not ranking stability, and not general model reliability.",
+    groups: [
+      { id: "0002", spread: 0 },
+      { id: "0008", spread: 0 },
+      { id: "0015", spread: 0 },
+      { id: "0016", spread: 0 },
+      { id: "0019", spread: 3 },
+      { id: "0022", spread: 0 },
+      { id: "0033", spread: 0 },
+      { id: "0072", spread: 0 }
+    ]
   },
   cost: {
-    title: "Skepticism was cheap.",
+    title: "This run's estimated usage cost.",
     copy:
-      "Estimated total across 67 calls: $0.273687 (pinned price table, documented in the repository). Record-level accounting keeps known / estimated / unknown distinct — never guessed: known $0, estimated 67 records, unknown 68 (triage siblings with no billed call of their own).",
+      "Estimated across 67 calls: $0.273687 from a pinned price table (documented in the repository). 67 records carry usage for 67 calls; the other 68 records — triage siblings sharing one billed call per sheet — have no separate bill. \"Known $0\" means no known-price records, not free provider usage.",
     rows: [
       ["triage", "$0.0775845", "9 calls"],
-      ["dedicated", "$0.102256", "21"],
-      ["face", "$0.0537015", "21"],
-      ["repeat", "$0.040145", "16"]
+      ["dedicated", "$0.102256", "21 calls"],
+      ["face", "$0.0537015", "21 calls"],
+      ["repeat", "$0.040145", "16 calls"]
     ],
-    tokens: "80,928 in · 18,559 out · 59,182 thinking"
+    tokens: "80,928 in · 18,559 out · 59,182 thinking",
+    tokenNote: "thinking-token counts may overlap output-token counts (per the frozen report's warnings)"
   },
   reproduce: {
     title: "Run it, inspect it.",
+    syntheticLabel: "Try the audit mechanics — keyless and image-free, on invented records:",
     code: [
       "git clone https://github.com/rmax-ai/cull-audit",
       "cd cull-audit",
       "uv venv && uv pip install -e .",
-      "python -m cull_audit demo --output tmp/demo   # keyless, image-free"
+      "python -m cull_audit demo --output tmp/demo"
     ],
-    note:
-      "The optional reference runner uses your own provider key and a dry-run gate first; the demo above needs no network beyond the initial clone/install.",
+    syntheticNote: "This synthetic demo exercises the mechanics; it does not reproduce the 77-photo study.",
+    studyLabel: "Check the study — rerun the audit on the frozen judgments:",
+    studyCode: [
+      "python -m cull_audit audit \\",
+      "  --judgments examples/open-demo/run-2026-10-03/judgments.json \\",
+      "  --baseline-stage triage --decisive-stage dedicated \\",
+      "  --prices examples/open-demo/price-table-gemini-3-flash-preview-2026-10.json \\",
+      "  --output tmp/audit-check --source-date-epoch 1791029022"
+    ],
+    studyNote: "Produces the same aggregates as the committed audit (6/21 flips, 8/8 robust, $0.273687). Byte-identical output means rerunning the audit on identical frozen inputs — not rerunning the live provider; the staged-workspace procedure is in RUN-NOTES. The optional reference runner (your own key, dry-run gate first) is how the study itself was produced.",
     links: [
       [
         "Frozen run artifacts ↗",
@@ -112,7 +141,13 @@ export const meta = {
   limits: {
     title: "What this cannot say.",
     copy:
-      "One licensed set, one model snapshot, one prompt configuration: these are demonstration receipts, not a benchmark. No claim of human ground truth; provider outputs drift; aesthetic judgment stays with people. The value is the audit itself — the evidence flips are visible at all."
+      "One licensed set, one model snapshot, one prompt configuration: these are demonstration receipts, not a benchmark. No claim of human ground truth; provider outputs drift; aesthetic judgment stays with people.",
+    next:
+      "The audit is the point, and it is open to challenge: inspect the frozen audit.json and report.md, run the synthetic smoke test, or bring your own records and pressure-test the pairing rules, stability thresholds, and cost attribution.",
+    nextLinks: [
+      ["Import guide ↗", "https://github.com/rmax-ai/cull-audit#3-audit-records-from-another-tool"],
+      ["Contribution guide ↗", "https://github.com/rmax-ai/cull-audit/blob/main/CONTRIBUTING.md"]
+    ]
   },
   footer:
     "Photographs: Nick Webb (London, United Kingdom), CC BY 2.0, via Wikimedia Commons — hotlinked with attribution from the demo manifest; not redistributed. Code: MIT. Site built from the v0.1.0 release artifacts.",
@@ -144,6 +179,7 @@ export const meta = {
     {
       id: "0050",
       title: "DSC 3228",
+      headline: true,
       filename: "0050.jpg",
       from: "accept",
       to: "reject",
@@ -214,7 +250,7 @@ export const dataset = {
 
 export const sheet = {
   label: "What the triage pass saw",
-  copy: "Relative reads happen inside sheets like this one: nine frames judged together in a single call — sheet 7 of 9. Neighbours set the context for every score. Two of this sheet's frames flipped downward when read alone, marked below.",
+  copy: "Relative reads happen inside sheets like this one: nine frames judged together in a single call — sheet 7 of 9. Two of this sheet's frames flipped downward when read alone, marked below; whether the neighbours caused the change is not something this run isolates.",
   note: "Tiles are hotlinked Wikimedia Commons thumbnails; each links to its source page. Photographs: Nick Webb, CC BY 2.0.",
   tiles: [
     { pos: 1, file: "0055.jpg", title: "Danny Boyle", verdict: "accept", composite: 85, flip: null,

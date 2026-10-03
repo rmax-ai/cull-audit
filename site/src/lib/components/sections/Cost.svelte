@@ -30,6 +30,7 @@
     <div class="rounded-xl border border-slate-800 bg-slate-900/40 p-5">
       <span class="font-mono text-[10px] uppercase tracking-[0.16em] text-slate-500">token envelope</span>
       <p class="mt-5 font-mono text-sm leading-7 text-slate-200">{meta.cost.tokens}</p>
+      <p class="mt-3 text-xs leading-5 text-slate-500">{meta.cost.tokenNote}</p>
       <div class="mt-7 h-px bg-slate-800"></div>
       <p class="mt-5 text-sm leading-6 text-slate-500">Known / estimated / unknown stay separate. No guessed bills.</p>
     </div>

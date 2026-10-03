@@ -1,8 +1,8 @@
 <svelte:head>
-  <title>cull-audit — The Flip Table</title>
+  <title>cull-audit — The Flip Table study</title>
   <meta
     name="description"
-    content="A visual study of a 67-call reference run: where AI culling verdicts flip, why ranking is not stability, and what the skepticism cost."
+    content="cull-audit is a local-first verification harness for AI photo-culling records. A visual study of a 67-call reference run: where verdicts flip, why ranking is not stability, and what the skepticism cost."
   />
 </svelte:head>
 

@@ -15,7 +15,6 @@
       <div class="mt-9 flex flex-wrap gap-3">
         <a class="button button-primary" href={`${base}/#study`}>{meta.hero.links.study}</a>
         <a class="button button-quiet" href={meta.hero.toolUrl} target="_blank" rel="noreferrer">{meta.hero.links.tool}</a>
-        <a class="button button-quiet" href={meta.hero.releaseUrl} target="_blank" rel="noreferrer">{meta.hero.links.release}</a>
       </div>
     </div>
     <div class="mt-16 flex flex-wrap items-center gap-x-2 gap-y-2 border-y border-slate-800 py-5 font-mono text-[11px] leading-5 text-slate-400">

@@ -16,4 +16,8 @@
       <a href={`${base}/#study`} class="mt-7 inline-flex font-mono text-xs text-teal-300 transition hover:text-teal-200">Follow the receipts <span class="ml-2">↓</span></a>
     </div>
   </div>
+  <div class="mt-14 overflow-x-auto rounded-xl border border-slate-800 bg-slate-950/60 p-3 sm:p-5">
+    <img src={`${base}/dataflow.svg`} alt="Diagram of producer records flowing through validation and audit into evidence files" class="w-full min-w-[720px]" />
+    <p class="mt-2 font-mono text-[10px] text-slate-500 md:hidden">Scroll horizontally to see the full diagram ↗</p>
+  </div>
 </Section>

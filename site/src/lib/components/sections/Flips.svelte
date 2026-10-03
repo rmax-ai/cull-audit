@@ -19,6 +19,18 @@ import { attribution, meta, sheet, type Verdict } from "$lib/data/meta";
     <p class="max-w-3xl text-lg leading-8 text-slate-300">{meta.flips.copy}</p>
   </div>
 
+  <div class="mt-12 grid overflow-hidden rounded-xl border border-slate-800 sm:grid-cols-3">
+    {#each meta.flips.transitions as transition}
+      <div class={`transition-bar transition-${transition.tone}`}>
+        <strong>{transition.count}</strong><span>{transition.from} → {transition.to}</span>
+      </div>
+    {/each}
+  </div>
+
+  <p class="mt-6 max-w-3xl text-sm leading-6 text-slate-400">
+    These six cards are every flip among the 21 paired photos — the complete set of verdict changes, nothing curated out.
+  </p>
+
   <div class="mt-12 rounded-xl border border-slate-800 bg-slate-900/40 p-6 sm:p-8">
     <p class="eyebrow">{sheet.label}</p>
     <p class="mt-4 max-w-3xl text-slate-300">{sheet.copy}</p>
@@ -39,26 +51,14 @@ import { attribution, meta, sheet, type Verdict } from "$lib/data/meta";
           />
           {#if tile.flip}
             <span class={`absolute bottom-1.5 right-1.5 rounded px-1.5 py-0.5 font-mono text-[10px] ${tile.flip.to === "reject" ? "bg-red-500/25 text-red-300" : "bg-amber-500/25 text-amber-300"}`}>
-              → {tile.flip.to} {tile.flip.after}
+              {tile.composite} → {tile.flip.to} {tile.flip.after}
             </span>
           {/if}
         </a>
       {/each}
     </div>
-    <p class="mt-4 font-mono text-[11px] text-slate-500">{sheet.note}</p>
+    <p class="mt-4 font-mono text-xs text-slate-400">{sheet.note}</p>
   </div>
-
-  <div class="mt-12 grid overflow-hidden rounded-xl border border-slate-800 sm:grid-cols-3">
-    {#each meta.flips.transitions as transition}
-      <div class={`transition-bar transition-${transition.tone}`}>
-        <strong>{transition.count}</strong><span>{transition.from} → {transition.to}</span>
-      </div>
-    {/each}
-  </div>
-
-  <p class="mt-6 max-w-3xl text-sm leading-6 text-slate-400">
-    These six cards are every flip among the 21 paired photos — the complete set of verdict changes, nothing curated out.
-  </p>
 
   <p class="mt-12 font-mono text-xs uppercase tracking-[0.14em] text-slate-500">{meta.flips.intro}</p>
   <div class="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -77,6 +77,9 @@ import { attribution, meta, sheet, type Verdict } from "$lib/data/meta";
             <a href={flip.page} target="_blank" rel="noreferrer" class="font-mono text-xs text-slate-200 hover:text-teal-300">{flip.filename} · {flip.title}</a>
             <span class="font-mono text-xs text-red-300">(−{flip.before - flip.after})</span>
           </div>
+          {#if flip.headline}
+            <span class="mt-2 inline-block rounded bg-teal-400/15 px-1.5 py-0.5 font-mono text-[10px] text-teal-300">headline case</span>
+          {/if}
           <div class="mt-3 flex items-center gap-2 text-[11px]">
             <span class={`verdict-chip ${chipClass(flip.from)}`}>{flip.from} {flip.before}</span>
             <span class="text-slate-600">→</span>
