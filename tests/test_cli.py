@@ -38,12 +38,6 @@ class CliTests(unittest.TestCase):
         self.assertEqual(module_result.stdout, console_result.stdout)
         self.assertEqual(module_result.stderr, "")
 
-    def test_demo_stub_reports_not_implemented(self) -> None:
-        result = self.run_console("demo")
-        self.assertEqual(result.returncode, 3)
-        self.assertIn("not implemented yet", result.stderr)
-        self.assertEqual(result.stdout, "")
-
     def test_audit_requires_its_required_options(self) -> None:
         result = self.run_console("audit")
         self.assertEqual(result.returncode, 2)

@@ -17,6 +17,7 @@ from typing import Sequence
 from . import __version__
 from .audit import AuditContractError, AuditIOError, run_audit
 from .contracts import JudgmentRecord, ValidationIssue
+from .demo import run_demo
 from .ingest import ingest
 
 EXIT_SUCCESS = 0
@@ -44,7 +45,8 @@ def build_parser() -> argparse.ArgumentParser:
     audit.add_argument("--prices", metavar="PATH")
     audit.add_argument("--source-date-epoch", metavar="UNIX_SECONDS")
     audit.add_argument("--strict", action="store_true")
-    subparsers.add_parser("demo")
+    demo = subparsers.add_parser("demo")
+    demo.add_argument("--output", required=True, metavar="DIR")
     return parser
 
 
@@ -113,6 +115,20 @@ def _audit(args: argparse.Namespace) -> int:
     return EXIT_SUCCESS
 
 
+def _demo(args: argparse.Namespace) -> int:
+    try:
+        audit_path, report_path = run_demo(args.output)
+    except AuditContractError as exc:
+        print(f"error: {exc}", file=sys.stderr)
+        return EXIT_CONTRACT
+    except AuditIOError as exc:
+        print(f"error: {exc}", file=sys.stderr)
+        return EXIT_IO
+    print(f"Wrote {audit_path}")
+    print(f"Wrote {report_path}")
+    return EXIT_SUCCESS
+
+
 def main(argv: Sequence[str] | None = None) -> int:
     """Parse arguments and dispatch commands."""
     args = build_parser().parse_args(argv)
@@ -120,5 +136,6 @@ def main(argv: Sequence[str] | None = None) -> int:
         return _validate(args)
     if args.command == "audit":
         return _audit(args)
-    print(f"{args.command}: not implemented yet", file=sys.stderr)
-    return EXIT_CONTRACT
+    if args.command == "demo":
+        return _demo(args)
+    return EXIT_USAGE
