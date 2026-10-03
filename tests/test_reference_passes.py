@@ -9,6 +9,7 @@ import unittest
 from PIL import Image
 
 from cull_audit.contracts import validate_document
+from cull_audit.costs import load_price_table, summarize_costs
 from cull_audit.reference.passes import (
     run_reference,
     select_finalists,
@@ -126,6 +127,26 @@ class ReferencePassTests(unittest.TestCase):
             )
             self.assertTrue(list((Path(directory) / "prepared").rglob("*")))
             self.assertTrue(list((Path(directory) / "responses").rglob("*")))
+            # Every written record carries model + billing currency metadata, so a
+            # pinned price table can estimate costs without guessing
+            # (audit --prices path).
+            written = json.loads((Path(directory) / "judgments.json").read_text())
+            for record in written["records"]:
+                self.assertEqual(record["context"].get("model"), "fake-model")
+                self.assertEqual(record["context"].get("currency"), "USD")
+            table = load_price_table(
+                {
+                    "version": "1.0",
+                    "model": "fake-model",
+                    "currency": "USD",
+                    "unit": "per_million_tokens",
+                    "effective": "2026-10-01",
+                    "prices": {"input": "1", "output": "2", "thinking": "2"},
+                }
+            )
+            summary = summarize_costs(written["records"], table)
+            self.assertEqual(summary.unknown_records, 0)
+            self.assertEqual(summary.estimated_records, len(written["records"]))
 
     def test_dry_run_plans_calls_without_using_counting_transport(self) -> None:
         transport = CountingTransport()

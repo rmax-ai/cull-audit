@@ -59,6 +59,10 @@ PROMPT_IDS = {
     "repeat": "repeat-v1",
 }
 TOOL_NAME = "cull-audit-reference"
+# Records carry the billing currency so a pinned price table can later produce
+# estimated costs in ``cull-audit audit``. The estimator requires matching model
+# and currency metadata on the record; it never guesses.
+BILLING_CURRENCY = "USD"
 _FALLBACK_PROMPTS = {
     "triage": """# Triage reference read
 
@@ -591,6 +595,7 @@ def _record(
     context: dict[str, Any] = {
         "prompt_id": prompt_id_value,
         "model": model,
+        "currency": BILLING_CURRENCY,
         "settings_fingerprint": settings,
     }
     if input_max_edge_px is not None:
