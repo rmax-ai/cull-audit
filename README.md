@@ -259,16 +259,14 @@ directory when working with private shoots, and do not commit private
 records or photos. Review reference-run artifacts separately before sharing
 them with anyone.
 
-## 8. Reproducibility and the future open demo
+## 8. Open demo
 
-For deterministic artifacts, pin `SOURCE_DATE_EPOCH` and keep the input bytes,
-stage names, and local price table fixed. Arrays are sorted by the audit
-builder, and the Markdown report is rendered from `audit.json`.
-
-The current keyless demo is the reproducible M1 example. There is not yet an
-open-photo reference dataset, acquisition script, or license manifest in this
-repository. Those are planned M2 work, and no photo license or public
-benchmark result is implied by the synthetic records.
+The open-photo demo is a coherent Wikimedia Commons event set; its manifest is the authority and images are not committed. See [`examples/open-demo/README.md`](examples/open-demo/README.md) for licensing, attribution, and reproducible acquisition.
+```bash
+python tools/open_demo_fetch.py report --manifest examples/open-demo/manifest.json
+python tools/open_demo_fetch.py fetch --manifest examples/open-demo/manifest.json --out /tmp/cull-audit-open-demo
+python tools/open_demo_fetch.py verify --manifest examples/open-demo/manifest.json --dir /tmp/cull-audit-open-demo
+```
 
 ## 9. Limitations and roadmap
 

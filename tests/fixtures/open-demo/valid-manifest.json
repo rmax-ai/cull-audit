@@ -1,0 +1,24 @@
+{
+  "version": "1.0",
+  "source": "wikimedia-commons",
+  "set": {
+    "title": "Fixture set",
+    "event": "Fixture event",
+    "selection_note": "Offline fixture only.",
+    "acquired": "2026-10-03"
+  },
+  "assets": [
+    {
+      "file": "0001.jpg",
+      "commons_page": "https://commons.wikimedia.org/wiki/File:Fixture.jpg",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Fixture.jpg",
+      "creator": "Fixture creator",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attribution": "Fixture creator, \"Fixture\", via Wikimedia Commons, CC BY-SA 4.0",
+      "bytes": 24,
+      "sha256": "5338f4a091b7768fa0efcc3e574c720a524addfb52118423cf0682ba7f16bc9c",
+      "redistribution": false
+    }
+  ]
+}
