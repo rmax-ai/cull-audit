@@ -152,6 +152,56 @@ class OpenDemoVerifyTests(unittest.TestCase):
             self.assertEqual(result.fetched, 1)
             self.assertEqual((Path(directory) / "0001.jpg").read_bytes(), content)
 
+    def test_fetch_skips_verified_files_and_replaces_mismatched(self) -> None:
+        manifest = fixture_manifest()
+        asset = manifest["assets"][0]
+        fixture = FIXTURE_DIR / "0001.jpg"
+        asset["bytes"] = fixture.stat().st_size
+        asset["sha256"] = hashlib.sha256(fixture.read_bytes()).hexdigest()
+
+        requests: list[str] = []
+
+        class Response:
+            def __init__(self) -> None:
+                self.sent = False
+
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *args):
+                return False
+
+            def read(self, size: int = -1) -> bytes:
+                if self.sent:
+                    return b""
+                self.sent = True
+                return fixture.read_bytes()
+
+        def opener(request):
+            requests.append("request")
+            return Response()
+
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory)
+            (output / "0001.jpg").write_bytes(b"stale bytes")
+            result = TOOL.fetch_assets(
+                manifest, output, opener=opener, sleep_fn=lambda _: None
+            )
+            self.assertEqual(result.fetched, 1)
+            self.assertEqual(result.already, 0)
+            self.assertEqual(result.failures, [])
+            self.assertEqual((output / "0001.jpg").read_bytes(), fixture.read_bytes())
+
+            requests.clear()
+            result = TOOL.fetch_assets(
+                manifest, output, opener=opener, sleep_fn=lambda _: None
+            )
+            self.assertEqual(result.fetched, 0)
+            self.assertEqual(result.already, 1)
+            self.assertEqual(result.failures, [])
+            self.assertEqual(requests, [])
+            self.assertEqual((output / "0001.jpg").read_bytes(), fixture.read_bytes())
+
 
 if __name__ == "__main__":
     unittest.main()

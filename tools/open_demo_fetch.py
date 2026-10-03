@@ -137,12 +137,13 @@ class FetchResult:
 
     assets: int
     fetched: int = 0
+    already: int = 0
     failures: list[str] = field(default_factory=list)
     bytes_downloaded: int = 0
 
     def summary(self) -> str:
         return (
-            f"assets={self.assets} fetched={self.fetched} "
+            f"assets={self.assets} fetched={self.fetched} already={self.already} "
             f"failures={len(self.failures)} bytes={self.bytes_downloaded}"
         )
 
@@ -470,6 +471,18 @@ def _download_to_path(
                 pass
 
 
+def _existing_matches(path: Path, expected_bytes: int, expected_sha256: str) -> bool:
+    """Return True when an existing file matches the manifest record."""
+
+    try:
+        if not path.is_file() or path.stat().st_size != expected_bytes:
+            return False
+        byte_count, digest = _sha256_file(path)
+    except OSError:
+        return False
+    return byte_count == expected_bytes and digest == expected_sha256
+
+
 def fetch_assets(
     manifest: Mapping[str, Any],
     directory: Path,
@@ -479,20 +492,31 @@ def fetch_assets(
     sleep_fn: Callable[[float], None] = time.sleep,
     delay: float = DOWNLOAD_DELAY_SECONDS,
 ) -> FetchResult:
-    """Fetch manifest rows in sorted order and verify each download."""
+    """Fetch manifest rows in sorted order and verify each download.
+
+    The fetch is resumable: a file that already exists with the recorded byte
+    count and SHA-256 is left untouched and counted as ``already``.  Only
+    missing or mismatched files cause a network request, so a fetch throttled
+    part-way through (Wikimedia can return 429 with Retry-After under bursty
+    load) can simply be repeated until the set reports complete.
+    """
 
     assets = list(manifest["assets"])
     selected = assets if limit is None else assets[:limit]
     result = FetchResult(assets=len(selected))
     directory.mkdir(parents=True, exist_ok=True)
-    for index, asset in enumerate(selected):
-        if index:
-            sleep_fn(delay)
+    for asset in selected:
         file_name = asset["file"]
+        destination = directory / file_name
+        if _existing_matches(destination, asset["bytes"], asset["sha256"]):
+            result.already += 1
+            continue
+        if result.fetched or result.failures:
+            sleep_fn(delay)
         try:
             byte_count, _ = _download_to_path(
                 asset["download_url"],
-                directory / file_name,
+                destination,
                 expected_bytes=asset["bytes"],
                 expected_sha256=asset["sha256"],
                 opener=opener,
