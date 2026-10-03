@@ -1,0 +1,216 @@
+{
+  "schema_version": "1.0",
+  "records": [
+    {
+      "record_id": "base/a",
+      "photo_id": "a.jpg",
+      "stage": "triage",
+      "read_kind": "relative",
+      "verdict": "reject",
+      "composite": 20,
+      "source": {"tool": "fixture-culler"},
+      "usage": {
+        "calls": 1,
+        "cost": {"currency": "USD", "total": 0.1, "source": "provider"}
+      }
+    },
+    {
+      "record_id": "dec/a",
+      "photo_id": "a.jpg",
+      "stage": "dedicated",
+      "read_kind": "absolute",
+      "verdict": "maybe",
+      "composite": 40,
+      "source": {"tool": "fixture-culler"},
+      "usage": {"calls": 1}
+    },
+    {
+      "record_id": "base/b",
+      "photo_id": "b.jpg",
+      "stage": "triage",
+      "read_kind": "relative",
+      "verdict": "accept",
+      "composite": 80,
+      "source": {"tool": "fixture-culler"},
+      "usage": {"calls": 1}
+    },
+    {
+      "record_id": "dec/b",
+      "photo_id": "b.jpg",
+      "stage": "dedicated",
+      "read_kind": "absolute",
+      "verdict": "reject",
+      "composite": 20,
+      "source": {"tool": "fixture-culler"},
+      "usage": {"calls": 1}
+    },
+    {
+      "record_id": "base/c",
+      "photo_id": "c.jpg",
+      "stage": "triage",
+      "read_kind": "relative",
+      "verdict": "maybe",
+      "composite": 20,
+      "source": {"tool": "fixture-culler"},
+      "usage": {"calls": 1}
+    },
+    {
+      "record_id": "dec/c",
+      "photo_id": "c.jpg",
+      "stage": "dedicated",
+      "read_kind": "absolute",
+      "verdict": "maybe",
+      "composite": 40,
+      "reasons": ["clean silhouette"],
+      "kill_factors": ["soft focus"],
+      "source": {"tool": "fixture-culler"},
+      "usage": {"calls": 1}
+    },
+    {
+      "record_id": "base/duplicate",
+      "photo_id": "duplicate.jpg",
+      "stage": "triage",
+      "read_kind": "relative",
+      "verdict": "maybe",
+      "composite": 50,
+      "source": {"tool": "fixture-culler"},
+      "usage": {"calls": 1}
+    },
+    {
+      "record_id": "dec/duplicate-2",
+      "photo_id": "duplicate.jpg",
+      "stage": "dedicated",
+      "read_kind": "absolute",
+      "verdict": "accept",
+      "composite": 70,
+      "source": {"tool": "fixture-culler"},
+      "usage": {"calls": 1}
+    },
+    {
+      "record_id": "dec/duplicate",
+      "photo_id": "duplicate.jpg",
+      "stage": "dedicated",
+      "read_kind": "absolute",
+      "verdict": "reject",
+      "composite": 30,
+      "source": {"tool": "fixture-culler"},
+      "usage": {"calls": 1}
+    },
+    {
+      "record_id": "repeat/robust-0",
+      "photo_id": "robust.jpg",
+      "stage": "repeat",
+      "read_kind": "absolute",
+      "verdict": "maybe",
+      "composite": 50,
+      "context": {
+        "repeat_group": "robust",
+        "repeat_index": 0,
+        "settings_fingerprint": "fixture-settings"
+      },
+      "source": {"tool": "fixture-culler"},
+      "usage": {"calls": 1}
+    },
+    {
+      "record_id": "repeat/robust-1",
+      "photo_id": "robust.jpg",
+      "stage": "repeat",
+      "read_kind": "absolute",
+      "verdict": "maybe",
+      "composite": 53,
+      "context": {
+        "repeat_group": "robust",
+        "repeat_index": 1,
+        "settings_fingerprint": "fixture-settings"
+      },
+      "source": {"tool": "fixture-culler"},
+      "usage": {"calls": 1}
+    },
+    {
+      "record_id": "repeat/soft-0",
+      "photo_id": "soft.jpg",
+      "stage": "repeat",
+      "read_kind": "absolute",
+      "verdict": "maybe",
+      "composite": 40,
+      "context": {
+        "repeat_group": "soft",
+        "repeat_index": 0,
+        "settings_fingerprint": "fixture-settings"
+      },
+      "source": {"tool": "fixture-culler"},
+      "usage": {"calls": 1}
+    },
+    {
+      "record_id": "repeat/soft-1",
+      "photo_id": "soft.jpg",
+      "stage": "repeat",
+      "read_kind": "absolute",
+      "verdict": "maybe",
+      "composite": 50,
+      "context": {
+        "repeat_group": "soft",
+        "repeat_index": 1,
+        "settings_fingerprint": "fixture-settings"
+      },
+      "source": {"tool": "fixture-culler"},
+      "usage": {"calls": 1}
+    },
+    {
+      "record_id": "repeat/unstable-0",
+      "photo_id": "unstable.jpg",
+      "stage": "repeat",
+      "read_kind": "absolute",
+      "verdict": "accept",
+      "composite": 50,
+      "context": {
+        "repeat_group": "unstable",
+        "repeat_index": 0,
+        "settings_fingerprint": "fixture-settings"
+      },
+      "source": {"tool": "fixture-culler"},
+      "usage": {"calls": 1}
+    },
+    {
+      "record_id": "repeat/unstable-1",
+      "photo_id": "unstable.jpg",
+      "stage": "repeat",
+      "read_kind": "absolute",
+      "verdict": "reject",
+      "composite": 50,
+      "context": {
+        "repeat_group": "unstable",
+        "repeat_index": 1,
+        "settings_fingerprint": "fixture-settings"
+      },
+      "source": {"tool": "fixture-culler"},
+      "usage": {"calls": 1}
+    },
+    {
+      "record_id": "estimated/one",
+      "photo_id": "estimated.jpg",
+      "stage": "estimated",
+      "read_kind": "absolute",
+      "verdict": "maybe",
+      "context": {
+        "model": "fixture-model",
+        "currency": "USD",
+        "prompt_id": "fixture-prompt"
+      },
+      "source": {"tool": "fixture-culler"},
+      "usage": {
+        "input_tokens": 1000000,
+        "calls": 1
+      }
+    },
+    {
+      "record_id": "unknown/one",
+      "photo_id": "unknown.jpg",
+      "stage": "unknown",
+      "read_kind": "other",
+      "verdict": "maybe",
+      "source": {"tool": "fixture-culler"},
+      "usage": {"calls": 1}
+    }
+  ]
+}

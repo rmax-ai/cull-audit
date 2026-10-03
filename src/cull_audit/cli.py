@@ -15,6 +15,7 @@ import sys
 from typing import Sequence
 
 from . import __version__
+from .audit import AuditContractError, AuditIOError, run_audit
 from .contracts import JudgmentRecord, ValidationIssue
 from .ingest import ingest
 
@@ -34,8 +35,16 @@ def build_parser() -> argparse.ArgumentParser:
     validate.add_argument("--judgments", required=True, metavar="PATH")
     validate.add_argument("--photos", metavar="DIR")
     validate.add_argument("--format", choices=("text", "json"), default="text")
-    for command in ("audit", "demo"):
-        subparsers.add_parser(command)
+    audit = subparsers.add_parser("audit")
+    audit.add_argument("--judgments", required=True, metavar="PATH")
+    audit.add_argument("--baseline-stage", required=True, metavar="NAME")
+    audit.add_argument("--decisive-stage", required=True, metavar="NAME")
+    audit.add_argument("--output", required=True, metavar="DIR")
+    audit.add_argument("--photos", metavar="DIR")
+    audit.add_argument("--prices", metavar="PATH")
+    audit.add_argument("--source-date-epoch", metavar="UNIX_SECONDS")
+    audit.add_argument("--strict", action="store_true")
+    subparsers.add_parser("demo")
     return parser
 
 
@@ -83,10 +92,33 @@ def _validate(args: argparse.Namespace) -> int:
     return EXIT_SUCCESS if not errors else EXIT_CONTRACT
 
 
+def _audit(args: argparse.Namespace) -> int:
+    try:
+        run_audit(
+            args.judgments,
+            baseline_stage=args.baseline_stage,
+            decisive_stage=args.decisive_stage,
+            output=args.output,
+            photos=args.photos,
+            prices=args.prices,
+            source_date_epoch=args.source_date_epoch,
+            strict=args.strict,
+        )
+    except AuditContractError as exc:
+        print(f"error: {exc}", file=sys.stderr)
+        return EXIT_CONTRACT
+    except AuditIOError as exc:
+        print(f"error: {exc}", file=sys.stderr)
+        return EXIT_IO
+    return EXIT_SUCCESS
+
+
 def main(argv: Sequence[str] | None = None) -> int:
     """Parse arguments and dispatch commands."""
     args = build_parser().parse_args(argv)
     if args.command == "validate":
         return _validate(args)
+    if args.command == "audit":
+        return _audit(args)
     print(f"{args.command}: not implemented yet", file=sys.stderr)
     return EXIT_CONTRACT

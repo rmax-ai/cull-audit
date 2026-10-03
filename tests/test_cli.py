@@ -38,13 +38,16 @@ class CliTests(unittest.TestCase):
         self.assertEqual(module_result.stdout, console_result.stdout)
         self.assertEqual(module_result.stderr, "")
 
-    def test_stub_commands_report_not_implemented(self) -> None:
-        for command in ("audit", "demo"):
-            with self.subTest(command=command):
-                result = self.run_console(command)
-                self.assertEqual(result.returncode, 3)
-                self.assertIn("not implemented yet", result.stderr)
-                self.assertEqual(result.stdout, "")
+    def test_demo_stub_reports_not_implemented(self) -> None:
+        result = self.run_console("demo")
+        self.assertEqual(result.returncode, 3)
+        self.assertIn("not implemented yet", result.stderr)
+        self.assertEqual(result.stdout, "")
+
+    def test_audit_requires_its_required_options(self) -> None:
+        result = self.run_console("audit")
+        self.assertEqual(result.returncode, 2)
+        self.assertIn("the following arguments are required", result.stderr)
 
     def test_validate_accepts_document_and_json_output(self) -> None:
         fixture = Path(__file__).parent / "fixtures" / "records" / "valid.json"

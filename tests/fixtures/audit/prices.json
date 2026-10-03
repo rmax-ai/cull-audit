@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "model": "fixture-model",
+  "currency": "USD",
+  "unit": "per_million_tokens",
+  "effective": "fixture-2026",
+  "prices": {
+    "input": "0.20"
+  }
+}
