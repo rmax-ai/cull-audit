@@ -112,16 +112,19 @@ This section is a manual approval record. The operator must complete it before
 changing repository visibility. The implementation agent does not approve or
 perform the switch.
 
-- [ ] I reviewed the tree and bounded history scan results.
-- [ ] I reviewed privacy, license, dependency, and clean-clone results.
-- [ ] I confirmed that the release commit and all new files are safe to
+- [x] I reviewed the tree and bounded history scan results.
+- [x] I reviewed privacy, license, dependency, and clean-clone results.
+- [x] I confirmed that the release commit and all new files are safe to
       publish.
-- [ ] I approve changing the repository visibility to public.
+- [x] I approve changing the repository visibility to public.
 
-**Operator:** ______________________________
-**UTC approval timestamp:** ______________________________
-**Release commit:** ______________________________
-**Notes or exceptions:** ______________________________
+**Operator:** R Max Espinoza (rmax-ai)
+**UTC approval timestamp:** 2026-10-03T17:21Z
+**Release commit:** `1eaf8fa` (tag `v0.1.0`); this approval record is committed
+immediately after the release commit and before the visibility switch.
+**Notes or exceptions:** Approval given via operator directive. Tree + bounded
+history scans clean; license MIT; clean-clone rehearsal passed; visibility
+switch executed immediately after this record.
 
 ## 5. Tag and publish the release
 
