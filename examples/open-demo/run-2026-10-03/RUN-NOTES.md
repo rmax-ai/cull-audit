@@ -1,13 +1,13 @@
 # Public reference demo run
 
-Date: 2026-10-03 UTC  
-Model: `gemini-3-flash-preview`  
-Parameters: `--passes triage,dedicated,face,repeat --finalists 21 --repeat-top 8`  
-Provider calls: **67** = 9 triage + 21 dedicated + 21 face + 16 repeat  
-Judgment records: 135  
-Wall clock: 2026-10-03T11:29:05Z to 2026-10-03T12:03:28Z  
-Duration: 2,063 seconds (34 minutes 23 seconds)  
-Audit `SOURCE_DATE_EPOCH`: `1791029022`
+- Date: 2026-10-03 UTC
+- Model: `gemini-3-flash-preview`
+- Parameters: `--passes triage,dedicated,face,repeat --finalists 21 --repeat-top 8`
+- Provider calls: **67** = 9 triage + 21 dedicated + 21 face + 16 repeat
+- Judgment records: 135
+- Wall clock: 2026-10-03T11:29:05Z to 2026-10-03T12:03:28Z
+- Duration: 2,063 seconds (34 minutes 23 seconds)
+- Audit `SOURCE_DATE_EPOCH`: `1791029022`
 
 The photo set was verified locally before the run: 77 assets, 77 verified,
 0 missing, and 0 mismatched. The dry-run reported exactly 67 provider calls
