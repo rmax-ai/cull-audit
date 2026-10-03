@@ -934,7 +934,7 @@ class ReferenceRunner:
                         settings=settings,
                         input_max_edge_px=DEFAULT_MAX_EDGE,
                         comparison_group=f"sheet-{sheet_number:04d}",
-                        usage=usage,
+                        usage=usage if offset == 0 else None,
                     )
                     triage_records.append(record)
                     raw_records.append(record)

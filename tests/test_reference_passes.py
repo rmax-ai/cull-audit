@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from decimal import Decimal
 from io import BytesIO
 import json
 from pathlib import Path
@@ -134,6 +135,20 @@ class ReferencePassTests(unittest.TestCase):
             for record in written["records"]:
                 self.assertEqual(record["context"].get("model"), "fake-model")
                 self.assertEqual(record["context"].get("currency"), "USD")
+            triage = [record for record in written["records"] if record["stage"] == "triage"]
+            self.assertEqual(len(triage), 3)
+            self.assertIn("usage", triage[0])
+            self.assertNotIn("usage", triage[1])
+            self.assertNotIn("usage", triage[2])
+            self.assertEqual(
+                {record["context"]["comparison_group"] for record in triage},
+                {"sheet-0001"},
+            )
+            for stage in ("dedicated", "face", "repeat"):
+                stage_records = [
+                    record for record in written["records"] if record["stage"] == stage
+                ]
+                self.assertTrue(all("usage" in record for record in stage_records))
             table = load_price_table(
                 {
                     "version": "1.0",
@@ -145,8 +160,12 @@ class ReferencePassTests(unittest.TestCase):
                 }
             )
             summary = summarize_costs(written["records"], table)
-            self.assertEqual(summary.unknown_records, 0)
-            self.assertEqual(summary.estimated_records, len(written["records"]))
+            self.assertEqual(summary.unknown_records, 2)
+            self.assertEqual(summary.estimated_records, len(written["records"]) - 2)
+            triage_summary = summarize_costs(triage, table)
+            self.assertEqual(triage_summary.estimated_total, Decimal("0.000020"))
+            self.assertEqual(triage_summary.estimated_records, 1)
+            self.assertEqual(triage_summary.unknown_records, 2)
 
     def test_dry_run_plans_calls_without_using_counting_transport(self) -> None:
         transport = CountingTransport()
