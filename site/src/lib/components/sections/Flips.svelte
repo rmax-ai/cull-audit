@@ -1,6 +1,6 @@
 <script lang="ts">
   import Section from "$lib/components/ui/Section.svelte";
-import { attribution, meta, type Verdict } from "$lib/data/meta";
+import { attribution, meta, sheet, type Verdict } from "$lib/data/meta";
 
   const chipClass = (verdict: Verdict) =>
     verdict === "accept"
@@ -19,6 +19,35 @@ import { attribution, meta, type Verdict } from "$lib/data/meta";
     <p class="max-w-3xl text-lg leading-8 text-slate-300">{meta.flips.copy}</p>
   </div>
 
+  <div class="mt-12 rounded-xl border border-slate-800 bg-slate-900/40 p-6 sm:p-8">
+    <p class="eyebrow">{sheet.label}</p>
+    <p class="mt-4 max-w-3xl text-slate-300">{sheet.copy}</p>
+    <div class="mt-6 grid max-w-3xl grid-cols-3 gap-2">
+      {#each sheet.tiles as tile}
+        <a
+          href={tile.page}
+          target="_blank"
+          rel="noreferrer"
+          class={`group relative block overflow-hidden rounded-md border bg-slate-950 ${tile.flip ? "border-amber-500/60" : "border-slate-800"}`}
+        >
+          <span class="absolute left-1.5 top-1.5 z-10 rounded bg-slate-950/80 px-1.5 font-mono text-[10px] text-slate-300">{tile.pos}</span>
+          <img
+            src={tile.image}
+            alt={`${tile.title} — Nick Webb, CC BY 2.0, Wikimedia Commons`}
+            loading="lazy"
+            class="aspect-[3/2] w-full object-cover opacity-90 transition group-hover:opacity-100"
+          />
+          {#if tile.flip}
+            <span class={`absolute bottom-1.5 right-1.5 rounded px-1.5 py-0.5 font-mono text-[10px] ${tile.flip.to === "reject" ? "bg-red-500/25 text-red-300" : "bg-amber-500/25 text-amber-300"}`}>
+              → {tile.flip.to} {tile.flip.after}
+            </span>
+          {/if}
+        </a>
+      {/each}
+    </div>
+    <p class="mt-4 font-mono text-[11px] text-slate-500">{sheet.note}</p>
+  </div>
+
   <div class="mt-12 grid overflow-hidden rounded-xl border border-slate-800 sm:grid-cols-3">
     {#each meta.flips.transitions as transition}
       <div class={`transition-bar transition-${transition.tone}`}>
@@ -26,6 +55,10 @@ import { attribution, meta, type Verdict } from "$lib/data/meta";
       </div>
     {/each}
   </div>
+
+  <p class="mt-6 max-w-3xl text-sm leading-6 text-slate-400">
+    These six cards are every flip among the 21 paired photos — the complete set of verdict changes, nothing curated out.
+  </p>
 
   <p class="mt-12 font-mono text-xs uppercase tracking-[0.14em] text-slate-500">{meta.flips.intro}</p>
   <div class="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

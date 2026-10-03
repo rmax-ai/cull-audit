@@ -192,6 +192,61 @@ export const meta = {
   ] satisfies Flip[]
 } as const;
 
+export const dataset = {
+  label: "The set, and why it is this one",
+  copy: "The demo runs on one coherent, openly licensed event set — fixed and licensed before any model touched a frame.",
+  criteria: [
+    "Scale: 60–120 photos — large enough that frames compete for the same slot, small enough to inspect every outcome by hand. This set uses 77.",
+    "Coherence: one event, not a stock collage. Flips are meaningful when near-duplicate frames from the same session are judged against each other.",
+    "License clarity: only per-asset CC0, CC BY, or CC BY-SA with a stable author and source record. Anything unclear is excluded.",
+    "Fixed in advance: the set was licensed, SHA-256 verified, and frozen before the run — selection followed the event, not the results.",
+    "Manifest-first: every asset carries a source URL, creator, license, attribution text, and a content hash. The manifest is the authority.",
+    "No redistribution: the repository ships the manifest and a fetch script; photographs stay at their source, and this page hotlinks them with attribution."
+  ],
+  facts: [
+    ["photos", "77 — one event: London 2012 opening ceremony"],
+    ["creator", "Nick Webb (London, United Kingdom)"],
+    ["license", "CC BY 2.0 — verified per asset"],
+    ["integrity", "SHA-256 per file; manifest in examples/open-demo"],
+    ["acquisition", "scripted, fetch-only — no image files committed"]
+  ]
+} as const;
+
+export const sheet = {
+  label: "What the triage pass saw",
+  copy: "Relative reads happen inside sheets like this one: nine frames judged together in a single call — sheet 7 of 9. Neighbours set the context for every score. Two of this sheet's frames flipped downward when read alone, marked below.",
+  note: "Tiles are hotlinked Wikimedia Commons thumbnails; each links to its source page. Photographs: Nick Webb, CC BY 2.0.",
+  tiles: [
+    { pos: 1, file: "0055.jpg", title: "Danny Boyle", verdict: "accept", composite: 85, flip: null,
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Danny_Boyle_%287662179152%29.jpg?width=400",
+      page: "https://commons.wikimedia.org/wiki/File:Danny_Boyle_(7662179152).jpg" },
+    { pos: 2, file: "0056.jpg", title: "Green and Pleasant Land", verdict: "maybe", composite: 65, flip: null,
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Green_and_Pleasant_Land_%287662168214%29.jpg?width=400",
+      page: "https://commons.wikimedia.org/wiki/File:Green_and_Pleasant_Land_(7662168214).jpg" },
+    { pos: 3, file: "0057.jpg", title: "Here's To Everyone Who Gives Their Best", verdict: "maybe", composite: 55, flip: null,
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Here%27s_To_Everyone_Who_Gives_Their_Best_%287662150706%29.jpg?width=400",
+      page: "https://commons.wikimedia.org/wiki/File:Here's_To_Everyone_Who_Gives_Their_Best_(7662150706).jpg" },
+    { pos: 4, file: "0058.jpg", title: "Mike Oldfield", verdict: "accept", composite: 92, flip: { to: "maybe", after: 55 },
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Mike_Oldfield_%287662481762%29.jpg?width=400",
+      page: "https://commons.wikimedia.org/wiki/File:Mike_Oldfield_(7662481762).jpg" },
+    { pos: 5, file: "0059.jpg", title: "Olympic Rings Converge", verdict: "accept", composite: 82, flip: null,
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Olympic_Rings_Converge_%287662424656%29.jpg?width=400",
+      page: "https://commons.wikimedia.org/wiki/File:Olympic_Rings_Converge_(7662424656).jpg" },
+    { pos: 6, file: "0060.jpg", title: "Olympic Stadium", verdict: "accept", composite: 88, flip: null,
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Olympic_Stadium_%287662105508%29.jpg?width=400",
+      page: "https://commons.wikimedia.org/wiki/File:Olympic_Stadium_(7662105508).jpg" },
+    { pos: 7, file: "0061.jpg", title: "Orbit & The Olympic Stadium", verdict: "maybe", composite: 60, flip: null,
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Orbit_%26_The_Olypmic_Stadium_%287662118386%29.jpg?width=400",
+      page: "https://commons.wikimedia.org/wiki/File:Orbit_%26_The_Olypmic_Stadium_(7662118386).jpg" },
+    { pos: 8, file: "0062.jpg", title: "Royal Box", verdict: "reject", composite: 35, flip: null,
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Royal_Box_%287662466136%29.jpg?width=400",
+      page: "https://commons.wikimedia.org/wiki/File:Royal_Box_(7662466136).jpg" },
+    { pos: 9, file: "0063.jpg", title: "Smoking", verdict: "accept", composite: 86, flip: { to: "reject", after: 35 },
+      image: "https://commons.wikimedia.org/wiki/Special:FilePath/Smoking_%287662451492%29.jpg?width=400",
+      page: "https://commons.wikimedia.org/wiki/File:Smoking_(7662451492).jpg" }
+  ]
+} as const;
+
 export const sections = {
   links: {
     github: "https://github.com/rmax-ai/cull-audit",
