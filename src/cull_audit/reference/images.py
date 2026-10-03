@@ -71,7 +71,13 @@ def _as_bytes(value: bytes | bytearray | memoryview | str | Path | Image.Image) 
             raise ImagePreparationError(f"unable to read image {value}: {exc}") from exc
     if isinstance(value, Image.Image):
         output = BytesIO()
-        _save_png(value.convert("RGBA"), output)
+        # Preserve transparency when the source has it, but avoid making
+        # opaque Pillow inputs pay for an unnecessary alpha channel.
+        if "A" in value.getbands() or "transparency" in value.info:
+            normalized = value.convert("RGBA")
+        else:
+            normalized = value.convert("RGB")
+        _save_png(normalized, output)
         return output.getvalue()
     raise ImagePreparationError("image input must be bytes, a path, or a Pillow image")
 
@@ -121,13 +127,18 @@ def mime_type_for_format(image_format: str) -> str:
 
 
 def _save_png(image: Image.Image, output: BytesIO) -> None:
-    """Write a metadata-free deterministic PNG."""
+    """Write a metadata-free deterministic PNG.
+
+    ``compress_level=1`` is part of the byte-determinism contract.  Keeping
+    the encoder settings fixed keeps bytes stable across reruns while
+    avoiding the expensive maximum-compression pass.
+    """
 
     image.save(
         output,
         format="PNG",
         optimize=False,
-        compress_level=9,
+        compress_level=1,
     )
 
 

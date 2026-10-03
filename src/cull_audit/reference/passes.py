@@ -841,6 +841,7 @@ class ReferenceRunner:
 
         client = self._client_for(output_dir) if not dry_run else None
         prepared_paths: list[Path] = []
+        prepared_artifacts: dict[bytes, Path] = {}
         planned: list[PlannedReferenceCall] = []
         raw_records: list[dict[str, Any]] = []
         triage_records: list[dict[str, Any]] = []
@@ -848,21 +849,50 @@ class ReferenceRunner:
         bbox_by_photo: dict[str, tuple[float, float, float, float]] = {}
         photo_by_id = {photo.photo_id: photo for photo in source_photos}
 
+        def write_prepared(
+            pass_name: str,
+            ordinal: int,
+            photo_id: str,
+            data: bytes,
+            *,
+            suffix: str = ".png",
+        ) -> Path | None:
+            """Write one prepared byte string once per reference run."""
+
+            if output_dir is None:
+                return None
+            cached = prepared_artifacts.get(data)
+            if cached is not None:
+                return cached
+            path = _write_prepared(
+                output_dir,
+                pass_name,
+                ordinal,
+                photo_id,
+                data,
+                suffix=suffix,
+            )
+            if path is not None:
+                prepared_artifacts[data] = path
+            return path
+
+        def track_prepared(path: Path | None) -> None:
+            if path is not None and path not in prepared_paths:
+                prepared_paths.append(path)
+
         if "triage" in selected:
             for sheet_number, start in enumerate(range(0, len(source_photos), 9), 1):
                 sheet_photos = source_photos[start : start + 9]
                 sheet_data = make_contact_sheet(
                     [(photo.photo_id, photo.data) for photo in sheet_photos]
                 )
-                sheet_path = _write_prepared(
-                    output_dir,
+                sheet_path = write_prepared(
                     "triage",
                     sheet_number,
                     f"sheet-{sheet_number:04d}",
                     sheet_data,
                 )
-                if sheet_path is not None:
-                    prepared_paths.append(sheet_path)
+                track_prepared(sheet_path)
                 assert client is not None or dry_run
                 response, items = self._call(
                     client,  # type: ignore[arg-type]
@@ -917,16 +947,14 @@ class ReferenceRunner:
                 photo = photo_by_id[photo_id]
                 prepared_data = prepare_dedicated(photo.data, max_edge=DEFAULT_MAX_EDGE)
                 suffix = _prepared_suffix(prepared_data)
-                path = _write_prepared(
-                    output_dir,
+                path = write_prepared(
                     "dedicated",
                     ordinal,
                     photo_id,
                     prepared_data,
                     suffix=suffix,
                 )
-                if path is not None:
-                    prepared_paths.append(path)
+                track_prepared(path)
                 assert client is not None or dry_run
                 response, items = self._call(
                     client,  # type: ignore[arg-type]
@@ -990,15 +1018,13 @@ class ReferenceRunner:
                     prepared_edge = image_info(prepared_data).long_edge
                 except ImagePreparationError as exc:
                     raise ReferenceIOError(f"unable to prepare face crop for {photo_id}: {exc}") from exc
-                path = _write_prepared(
-                    output_dir,
+                path = write_prepared(
                     "face",
                     ordinal,
                     photo_id,
                     prepared_data,
                 )
-                if path is not None:
-                    prepared_paths.append(path)
+                track_prepared(path)
                 assert client is not None or dry_run
                 response, items = self._call(
                     client,  # type: ignore[arg-type]
@@ -1077,16 +1103,14 @@ class ReferenceRunner:
                 # All repeats intentionally use one prepared byte string and
                 # one prompt/configuration object per photo.
                 repeat_group = f"repeat/{_safe_slug(photo_id)}"
-                path = _write_prepared(
-                    output_dir,
+                path = write_prepared(
                     "repeat",
                     ordinal,
                     photo_id,
                     prepared_data,
                     suffix=_prepared_suffix(prepared_data),
                 )
-                if path is not None and path not in prepared_paths:
-                    prepared_paths.append(path)
+                track_prepared(path)
                 for repeat_index in range(repeat_count):
                     assert client is not None or dry_run
                     response, items = self._call(
