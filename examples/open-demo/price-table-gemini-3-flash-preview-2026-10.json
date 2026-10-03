@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "model": "gemini-3-flash-preview",
+  "currency": "USD",
+  "unit": "per_million_tokens",
+  "effective": "2026-10-03",
+  "prices": {
+    "input": "0.50",
+    "output": "3.00",
+    "thinking": "3.00"
+  }
+}

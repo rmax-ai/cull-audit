@@ -1,0 +1,4757 @@
+{
+ "schema_version": "1.0",
+ "records": [
+  {
+   "record_id": "triage/sheet-0001/00",
+   "photo_id": "0001.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "maybe",
+   "composite": 60,
+   "scores": {
+    "composition": 50,
+    "lighting": 60,
+    "technical": 70
+   },
+   "reasons": [
+    "Wide stadium view",
+    "Rigging and wires are visually cluttered",
+    "Flat overcast lighting"
+   ],
+   "context": {
+    "comparison_group": "sheet-0001",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1209,
+    "output_tokens": 1114,
+    "thinking_tokens": 2079,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0001/01",
+   "photo_id": "0002.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 85,
+   "scores": {
+    "composition": 80,
+    "lighting": 75,
+    "technical": 85
+   },
+   "reasons": [
+    "Clear focus on the central set piece",
+    "Good detail in the grass and tree",
+    "Well-exposed"
+   ],
+   "context": {
+    "comparison_group": "sheet-0001",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0001/02",
+   "photo_id": "0003.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "maybe",
+   "composite": 55,
+   "scores": {
+    "composition": 45,
+    "lighting": 60,
+    "technical": 70
+   },
+   "reasons": [
+    "Foreground spectators obstruct the view",
+    "Provides a good sense of the stadium scale"
+   ],
+   "kill_factors": [
+    "distracting foreground"
+   ],
+   "context": {
+    "comparison_group": "sheet-0001",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0001/03",
+   "photo_id": "0004.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 80,
+   "scores": {
+    "composition": 85,
+    "lighting": 70,
+    "technical": 80
+   },
+   "reasons": [
+    "Effective vertical framing",
+    "Captures the layers of the performance area well"
+   ],
+   "context": {
+    "comparison_group": "sheet-0001",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0001/04",
+   "photo_id": "0005.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "maybe",
+   "composite": 65,
+   "scores": {
+    "composition": 70,
+    "lighting": 60,
+    "technical": 60
+   },
+   "reasons": [
+    "Captures the 'WELCOME' text clearly",
+    "Slightly soft focus",
+    "High contrast lighting"
+   ],
+   "context": {
+    "comparison_group": "sheet-0001",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0001/05",
+   "photo_id": "0006.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "reject",
+   "composite": 30,
+   "scores": {
+    "composition": 40,
+    "lighting": 20,
+    "technical": 40
+   },
+   "reasons": [
+    "Severely underexposed",
+    "Monochromatic blue lighting lacks detail",
+    "Large distracting silhouettes in foreground"
+   ],
+   "kill_factors": [
+    "underexposed",
+    "poor lighting"
+   ],
+   "context": {
+    "comparison_group": "sheet-0001",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0001/06",
+   "photo_id": "0007.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 75,
+   "scores": {
+    "composition": 75,
+    "lighting": 70,
+    "technical": 75
+   },
+   "reasons": [
+    "Good wide-angle capture of the night event",
+    "Balanced exposure across the stadium"
+   ],
+   "context": {
+    "comparison_group": "sheet-0001",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0001/07",
+   "photo_id": "0008.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 90,
+   "scores": {
+    "composition": 85,
+    "lighting": 95,
+    "technical": 85
+   },
+   "reasons": [
+    "Dramatic capture of the light/waterfall effect",
+    "Strong focal point",
+    "Excellent contrast"
+   ],
+   "context": {
+    "comparison_group": "sheet-0001",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0001/08",
+   "photo_id": "0009.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "maybe",
+   "composite": 50,
+   "scores": {
+    "composition": 40,
+    "lighting": 65,
+    "technical": 70
+   },
+   "reasons": [
+    "Foreground elements are very prominent and distracting",
+    "Good overview of the field activity"
+   ],
+   "kill_factors": [
+    "distracting foreground"
+   ],
+   "context": {
+    "comparison_group": "sheet-0001",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0002/00",
+   "photo_id": "0010.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "reject",
+   "composite": 35,
+   "scores": {
+    "composition": 20,
+    "exposure": 80,
+    "focus": 75
+   },
+   "reasons": [
+    "Cluttered foreground with partial subjects",
+    "Lack of clear focal point",
+    "Distracting background elements"
+   ],
+   "kill_factors": [
+    "poor_framing"
+   ],
+   "context": {
+    "comparison_group": "sheet-0002",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1209,
+    "output_tokens": 1102,
+    "thinking_tokens": 1136,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0002/01",
+   "photo_id": "0011.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "maybe",
+   "composite": 55,
+   "scores": {
+    "composition": 60,
+    "exposure": 50,
+    "focus": 80
+   },
+   "reasons": [
+    "Underexposed in several areas",
+    "Subject is small within the frame",
+    "Interesting stage element captured"
+   ],
+   "context": {
+    "comparison_group": "sheet-0002",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0002/02",
+   "photo_id": "0012.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "maybe",
+   "composite": 58,
+   "scores": {
+    "composition": 65,
+    "exposure": 55,
+    "focus": 80
+   },
+   "reasons": [
+    "Better context than previous shot",
+    "Still suffers from low light and high contrast",
+    "Captures the scale of the event"
+   ],
+   "context": {
+    "comparison_group": "sheet-0002",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0002/03",
+   "photo_id": "0013.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 78,
+   "scores": {
+    "composition": 85,
+    "exposure": 75,
+    "focus": 70
+   },
+   "reasons": [
+    "Strong wide-angle composition",
+    "Vibrant colors and lighting",
+    "Good representation of the venue atmosphere"
+   ],
+   "context": {
+    "comparison_group": "sheet-0002",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0002/04",
+   "photo_id": "0014.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 82,
+   "scores": {
+    "composition": 80,
+    "exposure": 85,
+    "focus": 90
+   },
+   "reasons": [
+    "Clear subject focus",
+    "Good environmental portrait",
+    "Balanced exposure"
+   ],
+   "context": {
+    "comparison_group": "sheet-0002",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0002/05",
+   "photo_id": "0015.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 92,
+   "scores": {
+    "composition": 90,
+    "exposure": 85,
+    "focus": 95
+   },
+   "reasons": [
+    "High energy and engagement",
+    "Excellent focus on the subject",
+    "Iconic background context"
+   ],
+   "context": {
+    "comparison_group": "sheet-0002",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0002/06",
+   "photo_id": "0016.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 85,
+   "scores": {
+    "composition": 85,
+    "exposure": 80,
+    "focus": 90
+   },
+   "reasons": [
+    "Solid portrait framing",
+    "Good depth of field",
+    "Natural expression"
+   ],
+   "context": {
+    "comparison_group": "sheet-0002",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0002/07",
+   "photo_id": "0017.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "maybe",
+   "composite": 65,
+   "scores": {
+    "composition": 75,
+    "exposure": 70,
+    "focus": 85
+   },
+   "reasons": [
+    "Good angle on the stage prop",
+    "Slightly busy composition",
+    "Decent technical execution"
+   ],
+   "context": {
+    "comparison_group": "sheet-0002",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0002/08",
+   "photo_id": "0018.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 80,
+   "scores": {
+    "composition": 85,
+    "exposure": 75,
+    "focus": 85
+   },
+   "reasons": [
+    "Unique high-angle perspective",
+    "Interesting subject matter",
+    "Strong leading lines in composition"
+   ],
+   "context": {
+    "comparison_group": "sheet-0002",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0003/00",
+   "photo_id": "0019.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 85,
+   "scores": {
+    "composition": 8,
+    "exposure": 8,
+    "focus": 9
+   },
+   "reasons": [
+    "Clear subject",
+    "good framing of the rural set"
+   ],
+   "context": {
+    "comparison_group": "sheet-0003",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1209,
+    "output_tokens": 965,
+    "thinking_tokens": 1742,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0003/01",
+   "photo_id": "0020.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "maybe",
+   "composite": 65,
+   "scores": {
+    "composition": 7,
+    "exposure": 5,
+    "focus": 8
+   },
+   "reasons": [
+    "Interesting action but underexposed"
+   ],
+   "kill_factors": [
+    "underexposure"
+   ],
+   "context": {
+    "comparison_group": "sheet-0003",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0003/02",
+   "photo_id": "0021.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 80,
+   "scores": {
+    "composition": 8,
+    "exposure": 7,
+    "focus": 8
+   },
+   "reasons": [
+    "Good wide-angle view of the event"
+   ],
+   "context": {
+    "comparison_group": "sheet-0003",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0003/03",
+   "photo_id": "0022.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 90,
+   "scores": {
+    "composition": 9,
+    "exposure": 8,
+    "focus": 9
+   },
+   "reasons": [
+    "Strong focal point",
+    "well-composed"
+   ],
+   "context": {
+    "comparison_group": "sheet-0003",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0003/04",
+   "photo_id": "0023.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "maybe",
+   "composite": 70,
+   "scores": {
+    "composition": 8,
+    "exposure": 6,
+    "focus": 8
+   },
+   "reasons": [
+    "Good composition but slightly dark"
+   ],
+   "context": {
+    "comparison_group": "sheet-0003",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0003/05",
+   "photo_id": "0024.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 82,
+   "scores": {
+    "composition": 8,
+    "exposure": 7,
+    "focus": 9
+   },
+   "reasons": [
+    "Captures the activity well"
+   ],
+   "context": {
+    "comparison_group": "sheet-0003",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0003/06",
+   "photo_id": "0025.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "maybe",
+   "composite": 72,
+   "scores": {
+    "composition": 8,
+    "exposure": 6,
+    "focus": 8
+   },
+   "reasons": [
+    "Good overview",
+    "slightly dark"
+   ],
+   "context": {
+    "comparison_group": "sheet-0003",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0003/07",
+   "photo_id": "0026.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 88,
+   "scores": {
+    "composition": 9,
+    "exposure": 7,
+    "focus": 9
+   },
+   "reasons": [
+    "Unique perspective",
+    "clear subject"
+   ],
+   "context": {
+    "comparison_group": "sheet-0003",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0003/08",
+   "photo_id": "0027.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "reject",
+   "composite": 20,
+   "scores": {
+    "composition": 3,
+    "exposure": 4,
+    "focus": 2
+   },
+   "reasons": [
+    "Out of focus",
+    "unclear subject"
+   ],
+   "kill_factors": [
+    "blur",
+    "lack of subject clarity"
+   ],
+   "context": {
+    "comparison_group": "sheet-0003",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0004/00",
+   "photo_id": "0028.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "reject",
+   "composite": 15,
+   "scores": {
+    "composition": 30,
+    "exposure": 20,
+    "sharpness": 25
+   },
+   "reasons": [
+    "Severely underexposed",
+    "Obstructed view by netting or mesh",
+    "Lack of clear subject focus"
+   ],
+   "kill_factors": [
+    "exposure",
+    "obstruction"
+   ],
+   "context": {
+    "comparison_group": "sheet-0004",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1209,
+    "output_tokens": 1169,
+    "thinking_tokens": 1568,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0004/01",
+   "photo_id": "0029.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 85,
+   "scores": {
+    "composition": 80,
+    "exposure": 90,
+    "sharpness": 85
+   },
+   "reasons": [
+    "Clear wide-angle overview of the stadium",
+    "Good exposure and color balance",
+    "Captures the scale of the event effectively"
+   ],
+   "context": {
+    "comparison_group": "sheet-0004",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0004/02",
+   "photo_id": "0030.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "maybe",
+   "composite": 65,
+   "scores": {
+    "composition": 55,
+    "exposure": 85,
+    "sharpness": 80
+   },
+   "reasons": [
+    "Good overview of the crowd and stage",
+    "Significant distracting foreground elements (audience heads)"
+   ],
+   "kill_factors": [
+    "distracting elements"
+   ],
+   "context": {
+    "comparison_group": "sheet-0004",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0004/03",
+   "photo_id": "0031.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 92,
+   "scores": {
+    "composition": 90,
+    "exposure": 95,
+    "sharpness": 90
+   },
+   "reasons": [
+    "Excellent detail on the central set piece",
+    "Strong composition and lighting",
+    "Sharp focus on the performers and scenery"
+   ],
+   "context": {
+    "comparison_group": "sheet-0004",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0004/04",
+   "photo_id": "0032.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 82,
+   "scores": {
+    "composition": 80,
+    "exposure": 85,
+    "sharpness": 80
+   },
+   "reasons": [
+    "Good wide shot of the industrial segment",
+    "Captures the atmosphere and scale well"
+   ],
+   "context": {
+    "comparison_group": "sheet-0004",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0004/05",
+   "photo_id": "0033.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 88,
+   "scores": {
+    "composition": 90,
+    "exposure": 85,
+    "sharpness": 85
+   },
+   "reasons": [
+    "Dramatic lighting and atmospheric smoke",
+    "Good focus on the central industrial structures",
+    "Strongest of the similar industrial shots"
+   ],
+   "context": {
+    "comparison_group": "sheet-0004",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0004/06",
+   "photo_id": "0034.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "maybe",
+   "composite": 78,
+   "scores": {
+    "composition": 80,
+    "exposure": 80,
+    "sharpness": 85
+   },
+   "reasons": [
+    "High quality shot but redundant with 06",
+    "Slightly less dynamic composition than 06"
+   ],
+   "kill_factors": [
+    "redundancy"
+   ],
+   "context": {
+    "comparison_group": "sheet-0004",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0004/07",
+   "photo_id": "0035.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "maybe",
+   "composite": 60,
+   "scores": {
+    "composition": 70,
+    "exposure": 65,
+    "sharpness": 75
+   },
+   "reasons": [
+    "A bit underexposed in the foreground",
+    "Feels more distant and less engaging than other shots in the sequence"
+   ],
+   "kill_factors": [
+    "exposure"
+   ],
+   "context": {
+    "comparison_group": "sheet-0004",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0004/08",
+   "photo_id": "0036.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "maybe",
+   "composite": 75,
+   "scores": {
+    "composition": 80,
+    "exposure": 80,
+    "sharpness": 85
+   },
+   "reasons": [
+    "Good technical quality but redundant with 06 and 07",
+    "Does not offer a unique perspective compared to others"
+   ],
+   "kill_factors": [
+    "redundancy"
+   ],
+   "context": {
+    "comparison_group": "sheet-0004",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0005/00",
+   "photo_id": "0037.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 85,
+   "scores": {
+    "composition": 85,
+    "lighting": 80,
+    "sharpness": 85
+   },
+   "reasons": [
+    "Excellent wide-angle capture of the stadium atmosphere",
+    "Good balance of light and shadow",
+    "Sharp detail across the frame"
+   ],
+   "context": {
+    "comparison_group": "sheet-0005",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1209,
+    "output_tokens": 1115,
+    "thinking_tokens": 2395,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0005/01",
+   "photo_id": "0038.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "reject",
+   "composite": 25,
+   "scores": {
+    "composition": 40,
+    "lighting": 20,
+    "sharpness": 30
+   },
+   "reasons": [
+    "Severe overexposure in the blue channel",
+    "Lack of clear subject focus",
+    "Motion blur is evident"
+   ],
+   "kill_factors": [
+    "overexposure",
+    "blur"
+   ],
+   "context": {
+    "comparison_group": "sheet-0005",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0005/02",
+   "photo_id": "0039.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "maybe",
+   "composite": 65,
+   "scores": {
+    "composition": 70,
+    "lighting": 60,
+    "sharpness": 75
+   },
+   "reasons": [
+    "Decent overview but lacks a strong focal point",
+    "Lighting is somewhat flat in the foreground"
+   ],
+   "context": {
+    "comparison_group": "sheet-0005",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0005/03",
+   "photo_id": "0040.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "maybe",
+   "composite": 60,
+   "scores": {
+    "composition": 65,
+    "lighting": 55,
+    "sharpness": 70
+   },
+   "reasons": [
+    "Image is slightly underexposed",
+    "Composition is standard but unexciting"
+   ],
+   "kill_factors": [
+    "underexposure"
+   ],
+   "context": {
+    "comparison_group": "sheet-0005",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0005/04",
+   "photo_id": "0041.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 82,
+   "scores": {
+    "composition": 80,
+    "lighting": 85,
+    "sharpness": 85
+   },
+   "reasons": [
+    "Strong subject matter with the orchestra",
+    "Well-exposed and sharp",
+    "Good documentary value"
+   ],
+   "context": {
+    "comparison_group": "sheet-0005",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0005/05",
+   "photo_id": "0042.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 78,
+   "scores": {
+    "composition": 75,
+    "lighting": 75,
+    "sharpness": 80
+   },
+   "reasons": [
+    "Clear view of the central stage element",
+    "Good technical execution for a night shot"
+   ],
+   "context": {
+    "comparison_group": "sheet-0005",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0005/06",
+   "photo_id": "0043.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 88,
+   "scores": {
+    "composition": 90,
+    "lighting": 85,
+    "sharpness": 85
+   },
+   "reasons": [
+    "Dynamic shot of the central prop",
+    "Vibrant colors and good contrast",
+    "Engaging composition"
+   ],
+   "context": {
+    "comparison_group": "sheet-0005",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0005/07",
+   "photo_id": "0044.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "maybe",
+   "composite": 70,
+   "scores": {
+    "composition": 75,
+    "lighting": 65,
+    "sharpness": 75
+   },
+   "reasons": [
+    "Captures the pyrotechnics well",
+    "Highlights are slightly blown out in the center"
+   ],
+   "context": {
+    "comparison_group": "sheet-0005",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0005/08",
+   "photo_id": "0045.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "maybe",
+   "composite": 58,
+   "scores": {
+    "composition": 55,
+    "lighting": 60,
+    "sharpness": 65
+   },
+   "reasons": [
+    "Interesting fire elements but the overall frame is cluttered",
+    "Foreground is too dark"
+   ],
+   "context": {
+    "comparison_group": "sheet-0005",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0006/00",
+   "photo_id": "0046.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 85,
+   "scores": {
+    "composition": 85,
+    "lighting": 80,
+    "subject": 90
+   },
+   "reasons": [
+    "Excellent capture of pyrotechnics",
+    "Good wide-angle perspective of the stadium"
+   ],
+   "context": {
+    "comparison_group": "sheet-0006",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1209,
+    "output_tokens": 1060,
+    "thinking_tokens": 2125,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0006/01",
+   "photo_id": "0047.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "maybe",
+   "composite": 55,
+   "scores": {
+    "composition": 50,
+    "lighting": 70,
+    "subject": 60
+   },
+   "reasons": [
+    "Dynamic fire elements",
+    "Lacks context of the larger event"
+   ],
+   "kill_factors": [
+    "Tight framing"
+   ],
+   "context": {
+    "comparison_group": "sheet-0006",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0006/02",
+   "photo_id": "0048.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 80,
+   "scores": {
+    "composition": 75,
+    "lighting": 85,
+    "subject": 80
+   },
+   "reasons": [
+    "Vibrant red lighting",
+    "Comprehensive overview of the performance area"
+   ],
+   "context": {
+    "comparison_group": "sheet-0006",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0006/03",
+   "photo_id": "0049.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "maybe",
+   "composite": 65,
+   "scores": {
+    "composition": 65,
+    "lighting": 60,
+    "subject": 70
+   },
+   "reasons": [
+    "Captures the crowd interaction",
+    "Shadows are a bit deep"
+   ],
+   "context": {
+    "comparison_group": "sheet-0006",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0006/04",
+   "photo_id": "0050.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 92,
+   "scores": {
+    "composition": 95,
+    "lighting": 90,
+    "subject": 90
+   },
+   "reasons": [
+    "Strong symmetrical composition",
+    "Clear background elements",
+    "Well-balanced exposure"
+   ],
+   "context": {
+    "comparison_group": "sheet-0006",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0006/05",
+   "photo_id": "0051.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 78,
+   "scores": {
+    "composition": 75,
+    "lighting": 85,
+    "subject": 75
+   },
+   "reasons": [
+    "Dramatic spotlighting",
+    "Good use of vertical stadium architecture"
+   ],
+   "context": {
+    "comparison_group": "sheet-0006",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0006/06",
+   "photo_id": "0052.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "reject",
+   "composite": 45,
+   "scores": {
+    "composition": 40,
+    "lighting": 50,
+    "subject": 45
+   },
+   "reasons": [
+    "Excessive dead space at the top",
+    "Subject is too distant"
+   ],
+   "kill_factors": [
+    "Poor framing"
+   ],
+   "context": {
+    "comparison_group": "sheet-0006",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0006/07",
+   "photo_id": "0053.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "maybe",
+   "composite": 58,
+   "scores": {
+    "composition": 60,
+    "lighting": 50,
+    "subject": 65
+   },
+   "reasons": [
+    "Interesting silhouette effect",
+    "Overall image is significantly underexposed"
+   ],
+   "kill_factors": [
+    "Underexposed"
+   ],
+   "context": {
+    "comparison_group": "sheet-0006",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0006/08",
+   "photo_id": "0054.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 84,
+   "scores": {
+    "composition": 85,
+    "lighting": 80,
+    "subject": 85
+   },
+   "reasons": [
+    "Great sense of scale and atmosphere",
+    "Clear view of the stadium floor activity"
+   ],
+   "context": {
+    "comparison_group": "sheet-0006",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0007/00",
+   "photo_id": "0055.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 85,
+   "scores": {
+    "composition": 85,
+    "focus": 90,
+    "lighting": 80
+   },
+   "reasons": [
+    "Strong focal point with the large bell",
+    "Good balance between the subject and the crowd",
+    "Sharp focus on the main elements"
+   ],
+   "context": {
+    "comparison_group": "sheet-0007",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1209,
+    "output_tokens": 1150,
+    "thinking_tokens": 633,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0007/01",
+   "photo_id": "0056.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "maybe",
+   "composite": 65,
+   "scores": {
+    "composition": 60,
+    "focus": 75,
+    "lighting": 65
+   },
+   "reasons": [
+    "Interesting subject matter (pastoral scene in stadium)",
+    "Slightly flat lighting",
+    "Composition feels a bit distant"
+   ],
+   "context": {
+    "comparison_group": "sheet-0007",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0007/02",
+   "photo_id": "0057.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "maybe",
+   "composite": 55,
+   "scores": {
+    "composition": 50,
+    "focus": 80,
+    "lighting": 60
+   },
+   "reasons": [
+    "Clear capture of the Olympic screen",
+    "Lacks artistic depth",
+    "Primarily functional/documentary"
+   ],
+   "context": {
+    "comparison_group": "sheet-0007",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0007/03",
+   "photo_id": "0058.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 92,
+   "scores": {
+    "composition": 90,
+    "focus": 90,
+    "lighting": 95
+   },
+   "reasons": [
+    "Dramatic blue lighting creates high impact",
+    "Excellent timing with the performance on stage",
+    "Strong diagonal lines in composition"
+   ],
+   "context": {
+    "comparison_group": "sheet-0007",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0007/04",
+   "photo_id": "0059.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 82,
+   "scores": {
+    "composition": 85,
+    "focus": 80,
+    "lighting": 75
+   },
+   "reasons": [
+    "Captures the grand scale of the production",
+    "Good use of atmospheric lighting and smoke",
+    "Well-centered perspective"
+   ],
+   "context": {
+    "comparison_group": "sheet-0007",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0007/05",
+   "photo_id": "0060.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 88,
+   "scores": {
+    "composition": 90,
+    "focus": 85,
+    "lighting": 85
+   },
+   "reasons": [
+    "Beautiful contrast between wildflowers and industrial architecture",
+    "Vibrant color palette",
+    "Unique perspective on the stadium"
+   ],
+   "context": {
+    "comparison_group": "sheet-0007",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0007/06",
+   "photo_id": "0061.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "maybe",
+   "composite": 60,
+   "scores": {
+    "composition": 55,
+    "focus": 80,
+    "lighting": 70
+   },
+   "reasons": [
+    "Good architectural detail",
+    "Foreground is cluttered with people and equipment",
+    "Lacks a clear singular subject"
+   ],
+   "context": {
+    "comparison_group": "sheet-0007",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0007/07",
+   "photo_id": "0062.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "reject",
+   "composite": 35,
+   "scores": {
+    "composition": 30,
+    "focus": 40,
+    "lighting": 40
+   },
+   "reasons": [
+    "Messy composition with cut-off subjects",
+    "Noticeable motion blur or soft focus",
+    "Unflattering angle for a crowd shot"
+   ],
+   "kill_factors": [
+    "poor focus",
+    "bad composition"
+   ],
+   "context": {
+    "comparison_group": "sheet-0007",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0007/08",
+   "photo_id": "0063.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 86,
+   "scores": {
+    "composition": 80,
+    "focus": 85,
+    "lighting": 90
+   },
+   "reasons": [
+    "High energy and vibrant purple lighting",
+    "Captures the atmosphere of the event effectively",
+    "Good exposure for a difficult lighting situation"
+   ],
+   "context": {
+    "comparison_group": "sheet-0007",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0008/00",
+   "photo_id": "0064.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 88,
+   "scores": {
+    "composition": 85,
+    "lighting": 90,
+    "sharpness": 90
+   },
+   "reasons": [
+    "Strong focal point with the illuminated performers",
+    "Excellent color contrast between yellow light and dark background",
+    "Clean composition without distractions"
+   ],
+   "context": {
+    "comparison_group": "sheet-0008",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1209,
+    "output_tokens": 1114,
+    "thinking_tokens": 1739,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0008/01",
+   "photo_id": "0065.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "maybe",
+   "composite": 60,
+   "scores": {
+    "composition": 50,
+    "lighting": 70,
+    "sharpness": 80
+   },
+   "reasons": [
+    "Clear subject matter",
+    "Composition feels a bit flat and distant compared to others"
+   ],
+   "context": {
+    "comparison_group": "sheet-0008",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0008/02",
+   "photo_id": "0066.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "reject",
+   "composite": 25,
+   "scores": {
+    "composition": 20,
+    "lighting": 75,
+    "sharpness": 70
+   },
+   "reasons": [
+    "Significant foreground obstruction by spectators' heads",
+    "Poor framing of the main event"
+   ],
+   "kill_factors": [
+    "obstruction"
+   ],
+   "context": {
+    "comparison_group": "sheet-0008",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0008/03",
+   "photo_id": "0067.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "reject",
+   "composite": 30,
+   "scores": {
+    "composition": 30,
+    "lighting": 75,
+    "sharpness": 80
+   },
+   "reasons": [
+    "Foreground elements distract heavily from the stadium scene",
+    "Unbalanced composition"
+   ],
+   "kill_factors": [
+    "obstruction"
+   ],
+   "context": {
+    "comparison_group": "sheet-0008",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0008/04",
+   "photo_id": "0068.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "maybe",
+   "composite": 55,
+   "scores": {
+    "composition": 40,
+    "lighting": 85,
+    "sharpness": 85
+   },
+   "reasons": [
+    "Dynamic lighting and interesting perspective",
+    "Extreme Dutch angle tilt is disorienting"
+   ],
+   "context": {
+    "comparison_group": "sheet-0008",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0008/05",
+   "photo_id": "0069.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "maybe",
+   "composite": 50,
+   "scores": {
+    "composition": 45,
+    "lighting": 70,
+    "sharpness": 75
+   },
+   "reasons": [
+    "Good color palette with blue and purple tones",
+    "Minor foreground obstruction at the bottom edge",
+    "Slightly underexposed in the shadows"
+   ],
+   "context": {
+    "comparison_group": "sheet-0008",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0008/06",
+   "photo_id": "0070.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 92,
+   "scores": {
+    "composition": 90,
+    "lighting": 95,
+    "sharpness": 95
+   },
+   "reasons": [
+    "Excellent capture of the pyrotechnic light effect",
+    "Strong visual impact and clean framing",
+    "High technical quality"
+   ],
+   "context": {
+    "comparison_group": "sheet-0008",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0008/07",
+   "photo_id": "0071.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 82,
+   "scores": {
+    "composition": 80,
+    "lighting": 85,
+    "sharpness": 85
+   },
+   "reasons": [
+    "Atmospheric lighting with good use of haze",
+    "Captures the scale of the lighting rig well"
+   ],
+   "context": {
+    "comparison_group": "sheet-0008",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0008/08",
+   "photo_id": "0072.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 86,
+   "scores": {
+    "composition": 85,
+    "lighting": 85,
+    "sharpness": 85
+   },
+   "reasons": [
+    "Comprehensive wide view of the stadium event",
+    "Good balance of light and shadow across the frame"
+   ],
+   "context": {
+    "comparison_group": "sheet-0008",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0009/00",
+   "photo_id": "0073.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "maybe",
+   "composite": 65,
+   "scores": {
+    "composition": 70,
+    "focus": 75,
+    "lighting": 60
+   },
+   "reasons": [
+    "Provides a very wide context of the stadium",
+    "Subject is small and lacks impact compared to other shots"
+   ],
+   "context": {
+    "comparison_group": "sheet-0009",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1209,
+    "output_tokens": 636,
+    "thinking_tokens": 1206,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0009/01",
+   "photo_id": "0074.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 90,
+   "scores": {
+    "composition": 85,
+    "focus": 90,
+    "lighting": 95
+   },
+   "reasons": [
+    "Strongest subject focus in the set",
+    "Dramatic lighting and atmospheric effects are well-captured",
+    "Excellent detail on the central figure"
+   ],
+   "context": {
+    "comparison_group": "sheet-0009",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0009/02",
+   "photo_id": "0075.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "maybe",
+   "composite": 72,
+   "scores": {
+    "composition": 75,
+    "focus": 75,
+    "lighting": 70
+   },
+   "reasons": [
+    "Good balance between the central figure and the surrounding performance",
+    "Shows the scale of the event effectively"
+   ],
+   "context": {
+    "comparison_group": "sheet-0009",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0009/03",
+   "photo_id": "0076.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "accept",
+   "composite": 82,
+   "scores": {
+    "composition": 80,
+    "focus": 85,
+    "lighting": 85
+   },
+   "reasons": [
+    "Effective medium shot with good atmospheric depth",
+    "Clear subject separation from the background"
+   ],
+   "context": {
+    "comparison_group": "sheet-0009",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "triage/sheet-0009/04",
+   "photo_id": "0077.jpg",
+   "stage": "triage",
+   "read_kind": "relative",
+   "verdict": "reject",
+   "composite": 30,
+   "scores": {
+    "composition": 40,
+    "focus": 60,
+    "lighting": 25
+   },
+   "reasons": [
+    "Thematic inconsistency with the rest of the set",
+    "Flat, overcast lighting lacks the drama of the night shots",
+    "Distracting foreground elements"
+   ],
+   "kill_factors": [
+    "inconsistent theme",
+    "poor lighting"
+   ],
+   "context": {
+    "comparison_group": "sheet-0009",
+    "input_max_edge_px": 1536,
+    "prompt_id": "triage-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:a1c49cc8c625155b4861125fd4764ae78ad498ef08ba589114d32631da99e197",
+    "currency": "USD"
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "dedicated/000001",
+   "photo_id": "0015.jpg",
+   "stage": "dedicated",
+   "read_kind": "absolute",
+   "verdict": "accept",
+   "composite": 85,
+   "scores": {
+    "color": 85,
+    "composition": 80,
+    "exposure": 82,
+    "sharpness": 88
+   },
+   "reasons": [
+    "Sharp focus on the primary subject's face and expression",
+    "Excellent capture of a dynamic, emotional moment",
+    "Good environmental context showing the stadium background clearly",
+    "Natural color reproduction and balanced exposure on the subject"
+   ],
+   "context": {
+    "input_max_edge_px": 1536,
+    "prompt_id": "dedicated-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:02e2844643ca107a0aa9d07179b507415aa769b775fe30559ba29d6f1393a1f4",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1242,
+    "output_tokens": 176,
+    "thinking_tokens": 1147,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   },
+   "face_bbox": [
+    0.408,
+    0.214,
+    0.532,
+    0.472
+   ]
+  },
+  {
+   "record_id": "dedicated/000002",
+   "photo_id": "0031.jpg",
+   "stage": "dedicated",
+   "read_kind": "absolute",
+   "verdict": "accept",
+   "composite": 85,
+   "scores": {
+    "color": 85,
+    "composition": 90,
+    "exposure": 90,
+    "noise": 70,
+    "sharpness": 80
+   },
+   "reasons": [
+    "Excellent capture of a large-scale event with a clear central focus on the set design.",
+    "Well-balanced exposure and natural color rendition despite the complex stadium lighting.",
+    "Strong composition that effectively conveys the scale and atmosphere of the performance."
+   ],
+   "context": {
+    "input_max_edge_px": 1536,
+    "prompt_id": "dedicated-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:02e2844643ca107a0aa9d07179b507415aa769b775fe30559ba29d6f1393a1f4",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1220,
+    "output_tokens": 183,
+    "thinking_tokens": 1269,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   },
+   "face_bbox": [
+    0.04,
+    0.04,
+    0.82,
+    0.76
+   ]
+  },
+  {
+   "record_id": "dedicated/000003",
+   "photo_id": "0050.jpg",
+   "stage": "dedicated",
+   "read_kind": "absolute",
+   "verdict": "reject",
+   "composite": 45,
+   "scores": {
+    "color": 70,
+    "composition": 75,
+    "exposure": 65,
+    "noise": 30,
+    "sharpness": 35
+   },
+   "reasons": [
+    "Significant luminance and chroma noise throughout the image",
+    "Lack of critical sharpness and fine detail",
+    "Blown highlights on the central illuminated structure"
+   ],
+   "kill_factors": [
+    "noise",
+    "blur"
+   ],
+   "context": {
+    "input_max_edge_px": 1536,
+    "prompt_id": "dedicated-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:02e2844643ca107a0aa9d07179b507415aa769b775fe30559ba29d6f1393a1f4",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1210,
+    "output_tokens": 177,
+    "thinking_tokens": 967,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   },
+   "face_bbox": [
+    0.48,
+    0.51,
+    0.64,
+    0.86
+   ]
+  },
+  {
+   "record_id": "dedicated/000004",
+   "photo_id": "0058.jpg",
+   "stage": "dedicated",
+   "read_kind": "absolute",
+   "verdict": "maybe",
+   "composite": 55,
+   "scores": {
+    "composition": 75,
+    "exposure": 60,
+    "lighting": 65,
+    "noise": 30,
+    "sharpness": 40
+   },
+   "reasons": [
+    "Significant luminance and color noise throughout the image, especially in dark areas",
+    "Overall image is soft with a lack of fine detail on the performers",
+    "High contrast scene leads to crushed shadows in the audience areas",
+    "Compelling composition using the large bell as a foreground element"
+   ],
+   "kill_factors": [
+    "noise",
+    "sharpness"
+   ],
+   "context": {
+    "input_max_edge_px": 1536,
+    "prompt_id": "dedicated-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:02e2844643ca107a0aa9d07179b507415aa769b775fe30559ba29d6f1393a1f4",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1242,
+    "output_tokens": 207,
+    "thinking_tokens": 957,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   },
+   "face_bbox": [
+    0.11,
+    0.61,
+    0.65,
+    0.86
+   ]
+  },
+  {
+   "record_id": "dedicated/000005",
+   "photo_id": "0070.jpg",
+   "stage": "dedicated",
+   "read_kind": "absolute",
+   "verdict": "accept",
+   "composite": 85,
+   "scores": {
+    "color": 90,
+    "composition": 75,
+    "exposure": 85,
+    "sharpness": 80
+   },
+   "reasons": [
+    "Excellent capture of a high-contrast, dynamic pyrotechnic event.",
+    "Good exposure balance between the bright sparks and the dark stadium environment.",
+    "Strong visual impact with the iconic Olympic rings visible in the background."
+   ],
+   "context": {
+    "input_max_edge_px": 1536,
+    "prompt_id": "dedicated-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:02e2844643ca107a0aa9d07179b507415aa769b775fe30559ba29d6f1393a1f4",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1242,
+    "output_tokens": 173,
+    "thinking_tokens": 570,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   },
+   "face_bbox": [
+    0.158,
+    0.428,
+    0.892,
+    0.795
+   ]
+  },
+  {
+   "record_id": "dedicated/000006",
+   "photo_id": "0008.jpg",
+   "stage": "dedicated",
+   "read_kind": "absolute",
+   "verdict": "accept",
+   "composite": 88,
+   "scores": {
+    "composition": 85,
+    "lighting": 82,
+    "sharpness": 80,
+    "technical": 85
+   },
+   "reasons": [
+    "Excellent capture of a high-action pyrotechnic event",
+    "Strong visual impact through color contrast between the golden sparks and blue stadium lighting",
+    "Good framing that conveys the massive scale of the stadium and performance"
+   ],
+   "context": {
+    "input_max_edge_px": 1536,
+    "prompt_id": "dedicated-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:02e2844643ca107a0aa9d07179b507415aa769b775fe30559ba29d6f1393a1f4",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1242,
+    "output_tokens": 166,
+    "thinking_tokens": 848,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   },
+   "face_bbox": [
+    0.328,
+    0.335,
+    0.785,
+    0.925
+   ]
+  },
+  {
+   "record_id": "dedicated/000007",
+   "photo_id": "0022.jpg",
+   "stage": "dedicated",
+   "read_kind": "absolute",
+   "verdict": "accept",
+   "composite": 88,
+   "scores": {
+    "color": 85,
+    "composition": 92,
+    "exposure": 82,
+    "noise": 75,
+    "sharpness": 85
+   },
+   "reasons": [
+    "Strong composition using the large Olympic bell as a framing element.",
+    "Sharp focus on the primary subject and the central stage area.",
+    "Good dynamic range management in a challenging stadium lighting environment.",
+    "Clear documentation of a significant cultural event."
+   ],
+   "context": {
+    "input_max_edge_px": 1536,
+    "prompt_id": "dedicated-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:02e2844643ca107a0aa9d07179b507415aa769b775fe30559ba29d6f1393a1f4",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1242,
+    "output_tokens": 177,
+    "thinking_tokens": 872,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   },
+   "face_bbox": [
+    0.14,
+    0.6,
+    0.45,
+    0.8
+   ]
+  },
+  {
+   "record_id": "dedicated/000008",
+   "photo_id": "0074.jpg",
+   "stage": "dedicated",
+   "read_kind": "absolute",
+   "verdict": "accept",
+   "composite": 82,
+   "scores": {
+    "color": 85,
+    "composition": 90,
+    "exposure": 85,
+    "noise": 60,
+    "sharpness": 75
+   },
+   "reasons": [
+    "Impactful and well-framed composition of a large-scale performance.",
+    "The primary subject's face is clear and detailed despite the scale.",
+    "Effective use of stage lighting to create atmosphere.",
+    "Visible luminance noise in the shadows and background, expected for the lighting conditions."
+   ],
+   "context": {
+    "input_max_edge_px": 1536,
+    "prompt_id": "dedicated-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:02e2844643ca107a0aa9d07179b507415aa769b775fe30559ba29d6f1393a1f4",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1223,
+    "output_tokens": 197,
+    "thinking_tokens": 1603,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   },
+   "face_bbox": [
+    0.364,
+    0.142,
+    0.488,
+    0.345
+   ]
+  },
+  {
+   "record_id": "dedicated/000009",
+   "photo_id": "0026.jpg",
+   "stage": "dedicated",
+   "read_kind": "absolute",
+   "verdict": "maybe",
+   "composite": 52,
+   "scores": {
+    "composition": 75,
+    "lighting": 60,
+    "noise": 50,
+    "sharpness": 40
+   },
+   "reasons": [
+    "The image is noticeably soft with a lack of fine detail on subjects",
+    "Visible luminance noise is present, particularly in the darker grassy areas",
+    "Lighting appears flat and somewhat dim, likely due to artificial or overcast conditions"
+   ],
+   "context": {
+    "input_max_edge_px": 1536,
+    "prompt_id": "dedicated-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:02e2844643ca107a0aa9d07179b507415aa769b775fe30559ba29d6f1393a1f4",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1242,
+    "output_tokens": 175,
+    "thinking_tokens": 1048,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   },
+   "face_bbox": [
+    0.328,
+    0.243,
+    0.422,
+    0.396
+   ]
+  },
+  {
+   "record_id": "dedicated/000010",
+   "photo_id": "0033.jpg",
+   "stage": "dedicated",
+   "read_kind": "absolute",
+   "verdict": "accept",
+   "composite": 92,
+   "scores": {
+    "color": 90,
+    "composition": 95,
+    "exposure": 90,
+    "lighting": 90,
+    "sharpness": 85
+   },
+   "reasons": [
+    "Excellent wide-angle capture of a complex, large-scale performance.",
+    "Effective handling of atmospheric smoke and dramatic lighting.",
+    "Strong composition that conveys the scale and energy of the scene."
+   ],
+   "context": {
+    "input_max_edge_px": 1536,
+    "prompt_id": "dedicated-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:02e2844643ca107a0aa9d07179b507415aa769b775fe30559ba29d6f1393a1f4",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1242,
+    "output_tokens": 173,
+    "thinking_tokens": 801,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   },
+   "face_bbox": [
+    0.45,
+    0.45,
+    0.65,
+    0.65
+   ]
+  },
+  {
+   "record_id": "dedicated/000011",
+   "photo_id": "0043.jpg",
+   "stage": "dedicated",
+   "read_kind": "absolute",
+   "verdict": "accept",
+   "composite": 85,
+   "scores": {
+    "color": 90,
+    "composition": 90,
+    "exposure": 85,
+    "noise": 60,
+    "sharpness": 80
+   },
+   "reasons": [
+    "Excellent wide-angle composition capturing the scale of the stadium event.",
+    "Vibrant colors and effective use of low-light contrast.",
+    "Good focus on the central inflatable structure.",
+    "Noticeable luminance noise in the dark background areas, typical for high ISO."
+   ],
+   "context": {
+    "input_max_edge_px": 1536,
+    "prompt_id": "dedicated-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:02e2844643ca107a0aa9d07179b507415aa769b775fe30559ba29d6f1393a1f4",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1242,
+    "output_tokens": 182,
+    "thinking_tokens": 2535,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   },
+   "face_bbox": [
+    0.42,
+    0.11,
+    0.68,
+    0.63
+   ]
+  },
+  {
+   "record_id": "dedicated/000012",
+   "photo_id": "0060.jpg",
+   "stage": "dedicated",
+   "read_kind": "absolute",
+   "verdict": "accept",
+   "composite": 78,
+   "scores": {
+    "color": 75,
+    "composition": 82,
+    "exposure": 65,
+    "sharpness": 85
+   },
+   "reasons": [
+    "The sky is completely overexposed and lacks any detail, which is a significant technical flaw.",
+    "Excellent use of a wildflower meadow in the foreground to provide color and depth to the composition.",
+    "The architectural details of the stadium are sharp and well-rendered.",
+    "The overall image has a pleasant, natural feel despite the flat lighting."
+   ],
+   "context": {
+    "input_max_edge_px": 1536,
+    "prompt_id": "dedicated-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:02e2844643ca107a0aa9d07179b507415aa769b775fe30559ba29d6f1393a1f4",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1242,
+    "output_tokens": 197,
+    "thinking_tokens": 681,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   },
+   "face_bbox": [
+    0.0,
+    0.114,
+    0.915,
+    0.592
+   ]
+  },
+  {
+   "record_id": "dedicated/000013",
+   "photo_id": "0064.jpg",
+   "stage": "dedicated",
+   "read_kind": "absolute",
+   "verdict": "maybe",
+   "composite": 62,
+   "scores": {
+    "color": 70,
+    "composition": 75,
+    "lighting": 80,
+    "sharpness": 45,
+    "technical": 40
+   },
+   "reasons": [
+    "Strong atmospheric lighting and composition",
+    "Captures the scale and mood of the event effectively"
+   ],
+   "kill_factors": [
+    "Heavy luminance noise in shadows",
+    "Noticeable lack of detail and sharpness on the subjects"
+   ],
+   "context": {
+    "input_max_edge_px": 1536,
+    "prompt_id": "dedicated-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:02e2844643ca107a0aa9d07179b507415aa769b775fe30559ba29d6f1393a1f4",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1245,
+    "output_tokens": 171,
+    "thinking_tokens": 1486,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   },
+   "face_bbox": [
+    0.02,
+    0.56,
+    0.6,
+    0.75
+   ]
+  },
+  {
+   "record_id": "dedicated/000014",
+   "photo_id": "0063.jpg",
+   "stage": "dedicated",
+   "read_kind": "absolute",
+   "verdict": "reject",
+   "composite": 35,
+   "scores": {
+    "color": 60,
+    "composition": 20,
+    "exposure": 45,
+    "noise": 35,
+    "sharpness": 30
+   },
+   "reasons": [
+    "Large, out-of-focus person in the foreground distracts from the main subject",
+    "Overall image lacks sharpness and fine detail",
+    "Significant digital noise is visible, especially in the sky and dark areas",
+    "Heavy highlight clipping in the central stage and smoke area"
+   ],
+   "kill_factors": [
+    "distracting_foreground_element",
+    "low_sharpness"
+   ],
+   "context": {
+    "input_max_edge_px": 1536,
+    "prompt_id": "dedicated-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:02e2844643ca107a0aa9d07179b507415aa769b775fe30559ba29d6f1393a1f4",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1242,
+    "output_tokens": 213,
+    "thinking_tokens": 1961,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   },
+   "face_bbox": [
+    0.24,
+    0.81,
+    0.39,
+    1.0
+   ]
+  },
+  {
+   "record_id": "dedicated/000015",
+   "photo_id": "0072.jpg",
+   "stage": "dedicated",
+   "read_kind": "absolute",
+   "verdict": "accept",
+   "composite": 92,
+   "scores": {
+    "color": 94,
+    "composition": 95,
+    "exposure": 90,
+    "sharpness": 88
+   },
+   "reasons": [
+    "Stunning wide-angle shot of a large-scale event",
+    "Excellent handling of complex lighting and atmospheric effects",
+    "Strong composition that captures the scale and detail of the performance"
+   ],
+   "context": {
+    "input_max_edge_px": 1536,
+    "prompt_id": "dedicated-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:02e2844643ca107a0aa9d07179b507415aa769b775fe30559ba29d6f1393a1f4",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1242,
+    "output_tokens": 156,
+    "thinking_tokens": 1289,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   },
+   "face_bbox": [
+    0.05,
+    0.35,
+    0.95,
+    0.95
+   ]
+  },
+  {
+   "record_id": "dedicated/000016",
+   "photo_id": "0002.jpg",
+   "stage": "dedicated",
+   "read_kind": "absolute",
+   "verdict": "accept",
+   "composite": 88,
+   "scores": {
+    "color": 85,
+    "composition": 85,
+    "exposure": 88,
+    "sharpness": 85
+   },
+   "reasons": [
+    "Excellent clarity and detail across a complex, large-scale scene.",
+    "Well-balanced exposure capturing both bright highlights on the clouds and details in the shadows.",
+    "Effective wide-angle composition that successfully conveys the scale of the stadium performance."
+   ],
+   "context": {
+    "input_max_edge_px": 1536,
+    "prompt_id": "dedicated-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:02e2844643ca107a0aa9d07179b507415aa769b775fe30559ba29d6f1393a1f4",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1242,
+    "output_tokens": 178,
+    "thinking_tokens": 1494,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   },
+   "face_bbox": [
+    0.625,
+    0.538,
+    0.642,
+    0.601
+   ]
+  },
+  {
+   "record_id": "dedicated/000017",
+   "photo_id": "0016.jpg",
+   "stage": "dedicated",
+   "read_kind": "absolute",
+   "verdict": "accept",
+   "composite": 85,
+   "scores": {
+    "color": 90,
+    "composition": 80,
+    "exposure": 85,
+    "lighting": 85,
+    "sharpness": 80
+   },
+   "reasons": [
+    "Clear subject focus",
+    "Interesting and iconic background",
+    "Good exposure and natural lighting"
+   ],
+   "context": {
+    "input_max_edge_px": 1536,
+    "prompt_id": "dedicated-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:02e2844643ca107a0aa9d07179b507415aa769b775fe30559ba29d6f1393a1f4",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1242,
+    "output_tokens": 153,
+    "thinking_tokens": 981,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   },
+   "face_bbox": [
+    0.53,
+    0.13,
+    0.71,
+    0.46
+   ]
+  },
+  {
+   "record_id": "dedicated/000018",
+   "photo_id": "0019.jpg",
+   "stage": "dedicated",
+   "read_kind": "absolute",
+   "verdict": "accept",
+   "composite": 85,
+   "scores": {
+    "color": 80,
+    "composition": 90,
+    "exposure": 75,
+    "sharpness": 80
+   },
+   "reasons": [
+    "Well-composed scene with a clear focal point and interesting foreground framing",
+    "High level of detail in a complex, staged environment",
+    "Good use of color and lighting to create a specific mood"
+   ],
+   "context": {
+    "input_max_edge_px": 1536,
+    "prompt_id": "dedicated-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:02e2844643ca107a0aa9d07179b507415aa769b775fe30559ba29d6f1393a1f4",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1216,
+    "output_tokens": 170,
+    "thinking_tokens": 2289,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   },
+   "face_bbox": [
+    0.345,
+    0.594,
+    0.389,
+    0.788
+   ]
+  },
+  {
+   "record_id": "dedicated/000019",
+   "photo_id": "0029.jpg",
+   "stage": "dedicated",
+   "read_kind": "absolute",
+   "verdict": "accept",
+   "composite": 78,
+   "scores": {
+    "color": 80,
+    "composition": 85,
+    "exposure": 70,
+    "sharpness": 75
+   },
+   "reasons": [
+    "Excellent wide-angle capture of a complex stadium event.",
+    "Good use of perspective to show both the field performance and the audience.",
+    "Colors are well-rendered despite challenging mixed lighting."
+   ],
+   "context": {
+    "input_max_edge_px": 1536,
+    "prompt_id": "dedicated-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:02e2844643ca107a0aa9d07179b507415aa769b775fe30559ba29d6f1393a1f4",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1242,
+    "output_tokens": 164,
+    "thinking_tokens": 1627,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   },
+   "face_bbox": [
+    0.32,
+    0.63,
+    0.45,
+    0.98
+   ]
+  },
+  {
+   "record_id": "dedicated/000020",
+   "photo_id": "0037.jpg",
+   "stage": "dedicated",
+   "read_kind": "absolute",
+   "verdict": "maybe",
+   "composite": 62,
+   "scores": {
+    "color": 75,
+    "composition": 50,
+    "exposure": 65,
+    "lighting": 70,
+    "sharpness": 60
+   },
+   "reasons": [
+    "Large scale event photography with complex lighting and atmospheric effects.",
+    "Significant image noise is present in shadow areas, likely due to high ISO settings.",
+    "Distracting out-of-focus foreground elements (spectators' heads) obstruct the bottom of the frame.",
+    "Atmospheric haze and smoke from the performance reduce overall clarity and contrast."
+   ],
+   "context": {
+    "input_max_edge_px": 1536,
+    "prompt_id": "dedicated-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:02e2844643ca107a0aa9d07179b507415aa769b775fe30559ba29d6f1393a1f4",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1215,
+    "output_tokens": 208,
+    "thinking_tokens": 835,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   },
+   "face_bbox": [
+    0.301,
+    0.264,
+    0.724,
+    0.712
+   ]
+  },
+  {
+   "record_id": "dedicated/000021",
+   "photo_id": "0046.jpg",
+   "stage": "dedicated",
+   "read_kind": "absolute",
+   "verdict": "accept",
+   "composite": 78,
+   "scores": {
+    "color": 80,
+    "composition": 85,
+    "exposure": 75,
+    "sharpness": 70
+   },
+   "reasons": [
+    "Excellent capture of a large-scale event with dynamic lighting",
+    "Good wide-angle composition that conveys the scale of the stadium",
+    "Effective use of pyrotechnics as a focal point"
+   ],
+   "context": {
+    "input_max_edge_px": 1536,
+    "prompt_id": "dedicated-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:02e2844643ca107a0aa9d07179b507415aa769b775fe30559ba29d6f1393a1f4",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1193,
+    "output_tokens": 169,
+    "thinking_tokens": 742,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   },
+   "face_bbox": [
+    0.454,
+    0.335,
+    0.608,
+    0.718
+   ]
+  },
+  {
+   "record_id": "face/000001",
+   "photo_id": "0033.jpg",
+   "stage": "face",
+   "read_kind": "face_crop",
+   "verdict": "reject",
+   "composite": 0,
+   "scores": {
+    "composition": 5,
+    "focus": 10,
+    "lighting": 20,
+    "resolution": 5
+   },
+   "reasons": [
+    "The image is a wide-angle shot of a large scene with many people, none of whom are in focus as a face reference.",
+    "There is no clear, discernible face in the crop.",
+    "The subjects are too small and distant for facial feature analysis."
+   ],
+   "kill_factors": [
+    "no_face_detected",
+    "too_far_away"
+   ],
+   "context": {
+    "input_max_edge_px": 1536,
+    "prompt_id": "face-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:5b1ea9a9e269125c109f21b22b0f8f93ea88f9f8d769c208939105d8239efd2c",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1202,
+    "output_tokens": 160,
+    "thinking_tokens": 573,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "face/000002",
+   "photo_id": "0072.jpg",
+   "stage": "face",
+   "read_kind": "face_crop",
+   "verdict": "reject",
+   "composite": 0,
+   "scores": {
+    "clarity": 0,
+    "composition": 10,
+    "lighting": 40,
+    "resolution": 0
+   },
+   "reasons": [
+    "No discernible face is present in the image.",
+    "The image is a wide-angle shot of a stadium event where individuals are too small to identify.",
+    "Resolution is insufficient for a face or detail read."
+   ],
+   "kill_factors": [
+    "no_face",
+    "too_small"
+   ],
+   "context": {
+    "input_max_edge_px": 1536,
+    "prompt_id": "face-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:5b1ea9a9e269125c109f21b22b0f8f93ea88f9f8d769c208939105d8239efd2c",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1170,
+    "output_tokens": 146,
+    "thinking_tokens": 567,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "face/000003",
+   "photo_id": "0002.jpg",
+   "stage": "face",
+   "read_kind": "face_crop",
+   "verdict": "reject",
+   "composite": 15,
+   "scores": {
+    "clarity": 10,
+    "lighting": 50,
+    "occlusion": 30,
+    "pose": 60,
+    "resolution": 10
+   },
+   "reasons": [
+    "The face is extremely small and lacks any discernible detail.",
+    "The image is very blurry and low resolution.",
+    "A microphone partially occludes the face."
+   ],
+   "kill_factors": [
+    "too_small",
+    "blurry",
+    "low_resolution",
+    "occluded"
+   ],
+   "context": {
+    "input_max_edge_px": 324,
+    "prompt_id": "face-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:5b1ea9a9e269125c109f21b22b0f8f93ea88f9f8d769c208939105d8239efd2c",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1187,
+    "output_tokens": 160,
+    "thinking_tokens": 454,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "face/000004",
+   "photo_id": "0008.jpg",
+   "stage": "face",
+   "read_kind": "face_crop",
+   "verdict": "reject",
+   "composite": 0,
+   "scores": {
+    "expression": 0,
+    "lighting": 0,
+    "occlusion": 0,
+    "pose": 0,
+    "sharpness": 0
+   },
+   "reasons": [
+    "No face detected in the image."
+   ],
+   "kill_factors": [
+    "no_face"
+   ],
+   "context": {
+    "input_max_edge_px": 1536,
+    "prompt_id": "face-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:5b1ea9a9e269125c109f21b22b0f8f93ea88f9f8d769c208939105d8239efd2c",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1187,
+    "output_tokens": 108,
+    "thinking_tokens": 357,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "face/000005",
+   "photo_id": "0022.jpg",
+   "stage": "face",
+   "read_kind": "face_crop",
+   "verdict": "reject",
+   "composite": 10,
+   "scores": {
+    "lighting": 45,
+    "occlusion": 100,
+    "pose": 50,
+    "resolution": 5,
+    "sharpness": 10
+   },
+   "reasons": [
+    "The image is a wide-angle shot where all faces are extremely small and lack the necessary detail for a reference read.",
+    "The primary subjects on stage are captured at a distance, resulting in very low resolution for facial features.",
+    "General lack of focus and presence of motion blur on the individuals in the frame."
+   ],
+   "kill_factors": [
+    "low_resolution",
+    "blur"
+   ],
+   "context": {
+    "input_max_edge_px": 1536,
+    "prompt_id": "face-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:5b1ea9a9e269125c109f21b22b0f8f93ea88f9f8d769c208939105d8239efd2c",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1166,
+    "output_tokens": 178,
+    "thinking_tokens": 1130,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "face/000006",
+   "photo_id": "0015.jpg",
+   "stage": "face",
+   "read_kind": "face_crop",
+   "verdict": "accept",
+   "composite": 88,
+   "scores": {
+    "composition": 95,
+    "detail": 90,
+    "focus": 92,
+    "lighting": 85
+   },
+   "reasons": [
+    "Excellent focus on the subject's face",
+    "High level of visible skin and hair detail",
+    "Well-lit with natural light, making features clear",
+    "Subject is centered and prominent in the frame"
+   ],
+   "context": {
+    "input_max_edge_px": 1324,
+    "prompt_id": "face-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:5b1ea9a9e269125c109f21b22b0f8f93ea88f9f8d769c208939105d8239efd2c",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1187,
+    "output_tokens": 133,
+    "thinking_tokens": 831,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "face/000007",
+   "photo_id": "0016.jpg",
+   "stage": "face",
+   "read_kind": "face_crop",
+   "verdict": "accept",
+   "composite": 88,
+   "scores": {
+    "framing": 10,
+    "lighting": 8,
+    "obstruction": 10,
+    "sharpness": 8
+   },
+   "reasons": [
+    "Clear and unobstructed view of facial features",
+    "Well-centered framing",
+    "Adequate lighting for feature identification",
+    "Good separation from the background"
+   ],
+   "context": {
+    "input_max_edge_px": 1536,
+    "prompt_id": "face-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:5b1ea9a9e269125c109f21b22b0f8f93ea88f9f8d769c208939105d8239efd2c",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1175,
+    "output_tokens": 122,
+    "thinking_tokens": 492,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "face/000008",
+   "photo_id": "0019.jpg",
+   "stage": "face",
+   "read_kind": "face_crop",
+   "verdict": "reject",
+   "composite": 12,
+   "scores": {
+    "clarity": 10,
+    "lighting": 50,
+    "pose": 40,
+    "resolution": 15
+   },
+   "reasons": [
+    "The face is extremely small within the frame, making it unsuitable for a reference.",
+    "Significant lack of detail and clarity due to distance and focus issues.",
+    "Facial features are blurred and cannot be clearly distinguished."
+   ],
+   "kill_factors": [
+    "too_small",
+    "blurry"
+   ],
+   "context": {
+    "input_max_edge_px": 568,
+    "prompt_id": "face-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:5b1ea9a9e269125c109f21b22b0f8f93ea88f9f8d769c208939105d8239efd2c",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1151,
+    "output_tokens": 149,
+    "thinking_tokens": 440,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "face/000009",
+   "photo_id": "0031.jpg",
+   "stage": "face",
+   "read_kind": "face_crop",
+   "verdict": "reject",
+   "composite": 0,
+   "scores": {
+    "clarity": 0,
+    "composition": 0,
+    "expression": 0,
+    "lighting": 0
+   },
+   "reasons": [
+    "The image is a wide-angle shot of a stadium event and does not contain a focused face.",
+    "Individual subjects are too small and distant for facial analysis.",
+    "Lack of any discernible facial features."
+   ],
+   "kill_factors": [
+    "no_face",
+    "too_small",
+    "low_resolution"
+   ],
+   "context": {
+    "input_max_edge_px": 1536,
+    "prompt_id": "face-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:5b1ea9a9e269125c109f21b22b0f8f93ea88f9f8d769c208939105d8239efd2c",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1180,
+    "output_tokens": 150,
+    "thinking_tokens": 444,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "face/000010",
+   "photo_id": "0043.jpg",
+   "stage": "face",
+   "read_kind": "face_crop",
+   "verdict": "reject",
+   "composite": 0,
+   "scores": {
+    "clarity": 0,
+    "composition": 0,
+    "face_presence": 0,
+    "lighting": 0
+   },
+   "reasons": [
+    "No human face is present in the image.",
+    "The image is a wide-angle shot of a large event where individual facial features are not discernible."
+   ],
+   "kill_factors": [
+    "no_face_detected"
+   ],
+   "context": {
+    "input_max_edge_px": 1536,
+    "prompt_id": "face-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:5b1ea9a9e269125c109f21b22b0f8f93ea88f9f8d769c208939105d8239efd2c",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1175,
+    "output_tokens": 128,
+    "thinking_tokens": 408,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "face/000011",
+   "photo_id": "0070.jpg",
+   "stage": "face",
+   "read_kind": "face_crop",
+   "verdict": "reject",
+   "composite": 0,
+   "scores": {
+    "composition": 0,
+    "expression": 0,
+    "lighting": 0,
+    "sharpness": 0
+   },
+   "reasons": [
+    "The image does not contain a human face.",
+    "The subject is a pyrotechnic display of Olympic rings."
+   ],
+   "kill_factors": [
+    "no_face_detected"
+   ],
+   "context": {
+    "input_max_edge_px": 1536,
+    "prompt_id": "face-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:5b1ea9a9e269125c109f21b22b0f8f93ea88f9f8d769c208939105d8239efd2c",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1195,
+    "output_tokens": 118,
+    "thinking_tokens": 322,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "face/000012",
+   "photo_id": "0074.jpg",
+   "stage": "face",
+   "read_kind": "face_crop",
+   "verdict": "accept",
+   "composite": 85,
+   "scores": {
+    "clarity": 8,
+    "lighting": 7,
+    "pose": 8,
+    "visibility": 9
+   },
+   "reasons": [
+    "The face is clearly visible and centered in the frame.",
+    "Details of the makeup and prosthetics are sharp and well-defined.",
+    "The lighting, while stylized, provides good contrast for the facial features.",
+    "The pose is a direct frontal view, making it a good reference for the character's appearance."
+   ],
+   "context": {
+    "input_max_edge_px": 1041,
+    "prompt_id": "face-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:5b1ea9a9e269125c109f21b22b0f8f93ea88f9f8d769c208939105d8239efd2c",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1195,
+    "output_tokens": 151,
+    "thinking_tokens": 788,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "face/000013",
+   "photo_id": "0029.jpg",
+   "stage": "face",
+   "read_kind": "face_crop",
+   "verdict": "reject",
+   "composite": 5,
+   "scores": {
+    "lighting": 5,
+    "pose": 20,
+    "resolution": 30,
+    "visibility": 10
+   },
+   "reasons": [
+    "The face is almost entirely in deep shadow, making features indistinguishable.",
+    "The subject is positioned in a profile/back view, obscuring the face.",
+    "Extreme underexposure on the primary subject prevents any detailed facial analysis."
+   ],
+   "kill_factors": [
+    "underexposed",
+    "obscured_face",
+    "poor_lighting"
+   ],
+   "context": {
+    "input_max_edge_px": 1453,
+    "prompt_id": "face-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:5b1ea9a9e269125c109f21b22b0f8f93ea88f9f8d769c208939105d8239efd2c",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1175,
+    "output_tokens": 160,
+    "thinking_tokens": 444,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "face/000014",
+   "photo_id": "0046.jpg",
+   "stage": "face",
+   "read_kind": "face_crop",
+   "verdict": "reject",
+   "composite": 0,
+   "scores": {
+    "clarity": 0,
+    "expression": 0,
+    "lighting": 0,
+    "pose": 0
+   },
+   "reasons": [
+    "No face is present in the image.",
+    "The image is a wide shot of a stadium event with a large crowd and an inflatable structure."
+   ],
+   "kill_factors": [
+    "no_face_detected"
+   ],
+   "context": {
+    "input_max_edge_px": 1012,
+    "prompt_id": "face-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:5b1ea9a9e269125c109f21b22b0f8f93ea88f9f8d769c208939105d8239efd2c",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1168,
+    "output_tokens": 124,
+    "thinking_tokens": 310,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "face/000015",
+   "photo_id": "0060.jpg",
+   "stage": "face",
+   "read_kind": "face_crop",
+   "verdict": "reject",
+   "composite": 0,
+   "scores": {
+    "clarity": 0,
+    "composition": 0,
+    "expression": 0,
+    "lighting": 0
+   },
+   "reasons": [
+    "No human face is present in the image."
+   ],
+   "kill_factors": [
+    "no_face_detected"
+   ],
+   "context": {
+    "input_max_edge_px": 1536,
+    "prompt_id": "face-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:5b1ea9a9e269125c109f21b22b0f8f93ea88f9f8d769c208939105d8239efd2c",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1199,
+    "output_tokens": 103,
+    "thinking_tokens": 131,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "face/000016",
+   "photo_id": "0037.jpg",
+   "stage": "face",
+   "read_kind": "face_crop",
+   "verdict": "reject",
+   "composite": 0,
+   "scores": {
+    "expression": 0,
+    "lighting": 10,
+    "occlusion": 0,
+    "pose": 0,
+    "resolution": 0
+   },
+   "reasons": [
+    "No face is visible in the provided image.",
+    "The image is a wide-angle shot of a large stadium event.",
+    "Individual people are too small and distant to discern any facial features."
+   ],
+   "kill_factors": [
+    "no_face_detected",
+    "too_far_away"
+   ],
+   "context": {
+    "input_max_edge_px": 1536,
+    "prompt_id": "face-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:5b1ea9a9e269125c109f21b22b0f8f93ea88f9f8d769c208939105d8239efd2c",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1159,
+    "output_tokens": 154,
+    "thinking_tokens": 511,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "face/000017",
+   "photo_id": "0064.jpg",
+   "stage": "face",
+   "read_kind": "face_crop",
+   "verdict": "reject",
+   "composite": 0,
+   "scores": {
+    "clarity": 0,
+    "composition": 0,
+    "focus": 0,
+    "lighting": 15
+   },
+   "reasons": [
+    "The image is a wide-angle shot of a large group performance.",
+    "No individual faces are discernible or focused upon.",
+    "The subjects are at an extreme distance, making facial features impossible to read."
+   ],
+   "kill_factors": [
+    "no_face_detected",
+    "extreme_distance",
+    "low_resolution_face"
+   ],
+   "context": {
+    "input_max_edge_px": 1536,
+    "prompt_id": "face-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:5b1ea9a9e269125c109f21b22b0f8f93ea88f9f8d769c208939105d8239efd2c",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1178,
+    "output_tokens": 155,
+    "thinking_tokens": 384,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "face/000018",
+   "photo_id": "0058.jpg",
+   "stage": "face",
+   "read_kind": "face_crop",
+   "verdict": "reject",
+   "composite": 0,
+   "scores": {
+    "clarity": 5,
+    "lighting": 15,
+    "pose": 0,
+    "resolution": 5
+   },
+   "reasons": [
+    "The image is a wide-angle shot of a concert stage with no focused subject.",
+    "Individual faces are extremely small and lack any discernible detail.",
+    "The resolution is insufficient for a face reference read at this distance."
+   ],
+   "kill_factors": [
+    "no_face_detected",
+    "too_small",
+    "low_resolution"
+   ],
+   "context": {
+    "input_max_edge_px": 1536,
+    "prompt_id": "face-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:5b1ea9a9e269125c109f21b22b0f8f93ea88f9f8d769c208939105d8239efd2c",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1159,
+    "output_tokens": 156,
+    "thinking_tokens": 597,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "face/000019",
+   "photo_id": "0026.jpg",
+   "stage": "face",
+   "read_kind": "face_crop",
+   "verdict": "reject",
+   "composite": 15,
+   "scores": {
+    "clarity": 1,
+    "lighting": 3,
+    "pose": 8,
+    "resolution": 1
+   },
+   "reasons": [
+    "The face is extremely low resolution and lacks detail.",
+    "Significant motion blur or focus issues obscure facial features.",
+    "The lighting is dim and underexposed."
+   ],
+   "kill_factors": [
+    "low_resolution",
+    "blurry",
+    "underexposed"
+   ],
+   "context": {
+    "input_max_edge_px": 641,
+    "prompt_id": "face-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:5b1ea9a9e269125c109f21b22b0f8f93ea88f9f8d769c208939105d8239efd2c",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1187,
+    "output_tokens": 141,
+    "thinking_tokens": 697,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "face/000020",
+   "photo_id": "0050.jpg",
+   "stage": "face",
+   "read_kind": "face_crop",
+   "verdict": "reject",
+   "composite": 0,
+   "scores": {
+    "clarity": 0,
+    "expression": 0,
+    "lighting": 0,
+    "occlusion": 0,
+    "pose": 0
+   },
+   "reasons": [
+    "The image does not contain a human face.",
+    "The primary subject is a large architectural prop or inflatable structure in a stadium setting."
+   ],
+   "kill_factors": [
+    "no_face_detected"
+   ],
+   "context": {
+    "input_max_edge_px": 1071,
+    "prompt_id": "face-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:5b1ea9a9e269125c109f21b22b0f8f93ea88f9f8d769c208939105d8239efd2c",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1168,
+    "output_tokens": 131,
+    "thinking_tokens": 384,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "face/000021",
+   "photo_id": "0063.jpg",
+   "stage": "face",
+   "read_kind": "face_crop",
+   "verdict": "reject",
+   "composite": 15,
+   "scores": {
+    "lighting": 10,
+    "sharpness": 15,
+    "visibility": 20
+   },
+   "reasons": [
+    "The face is extremely dark and obscured by heavy blue/purple lighting.",
+    "There is significant motion blur or the face is out of focus, making features indistinguishable.",
+    "Overall lack of detail and clarity for a reference image."
+   ],
+   "kill_factors": [
+    "poor_lighting",
+    "motion_blur",
+    "low_resolution_face"
+   ],
+   "context": {
+    "input_max_edge_px": 1159,
+    "prompt_id": "face-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:5b1ea9a9e269125c109f21b22b0f8f93ea88f9f8d769c208939105d8239efd2c",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1202,
+    "output_tokens": 153,
+    "thinking_tokens": 529,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "repeat/000001/00",
+   "photo_id": "0033.jpg",
+   "stage": "repeat",
+   "read_kind": "absolute",
+   "verdict": "accept",
+   "composite": 95,
+   "scores": {
+    "clarity": 95,
+    "composition": 98,
+    "detail": 95,
+    "lighting": 90
+   },
+   "reasons": [
+    "High-quality image capturing a complex theatrical scene with great clarity.",
+    "Excellent composition that conveys the massive scale of the production.",
+    "Strong detail in the costumes, machinery, and environmental effects like smoke and molten metal.",
+    "Effective use of atmospheric lighting to create a dramatic mood."
+   ],
+   "context": {
+    "repeat_group": "repeat/0033.jpg",
+    "repeat_index": 0,
+    "input_max_edge_px": 1536,
+    "prompt_id": "repeat-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:512879bad0252ec29ad7e4d391edf01385595fd0d23599556b7e98df18807e6f",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1214,
+    "output_tokens": 148,
+    "thinking_tokens": 457,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "repeat/000001/01",
+   "photo_id": "0033.jpg",
+   "stage": "repeat",
+   "read_kind": "absolute",
+   "verdict": "accept",
+   "composite": 95,
+   "scores": {
+    "clarity": 95,
+    "composition": 98,
+    "detail": 95,
+    "lighting": 90
+   },
+   "reasons": [
+    "High-quality image capturing a complex theatrical scene with great clarity.",
+    "Excellent composition that conveys the massive scale of the production.",
+    "Strong detail in the costumes, machinery, and environmental effects like smoke and molten metal.",
+    "Effective use of atmospheric lighting to create a dramatic mood."
+   ],
+   "context": {
+    "repeat_group": "repeat/0033.jpg",
+    "repeat_index": 1,
+    "input_max_edge_px": 1536,
+    "prompt_id": "repeat-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:512879bad0252ec29ad7e4d391edf01385595fd0d23599556b7e98df18807e6f",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1214,
+    "output_tokens": 148,
+    "thinking_tokens": 457,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "repeat/000002/00",
+   "photo_id": "0072.jpg",
+   "stage": "repeat",
+   "read_kind": "absolute",
+   "verdict": "accept",
+   "composite": 95,
+   "scores": {
+    "clarity": 92,
+    "composition": 96,
+    "interest": 100,
+    "quality": 95
+   },
+   "reasons": [
+    "High-quality, high-resolution image capturing an iconic cultural moment from the 2012 London Olympics opening ceremony.",
+    "The composition effectively conveys the massive scale of the 'Pandemonium' industrial revolution segment.",
+    "Excellent lighting and atmospheric detail, with clear visibility of the performers, smokestacks, and stadium architecture."
+   ],
+   "context": {
+    "repeat_group": "repeat/0072.jpg",
+    "repeat_index": 0,
+    "input_max_edge_px": 1536,
+    "prompt_id": "repeat-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:512879bad0252ec29ad7e4d391edf01385595fd0d23599556b7e98df18807e6f",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1214,
+    "output_tokens": 158,
+    "thinking_tokens": 421,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "repeat/000002/01",
+   "photo_id": "0072.jpg",
+   "stage": "repeat",
+   "read_kind": "absolute",
+   "verdict": "accept",
+   "composite": 95,
+   "scores": {
+    "clarity": 92,
+    "composition": 96,
+    "interest": 100,
+    "quality": 95
+   },
+   "reasons": [
+    "High-quality, high-resolution image capturing an iconic cultural moment from the 2012 London Olympics opening ceremony.",
+    "The composition effectively conveys the massive scale of the 'Pandemonium' industrial revolution segment.",
+    "Excellent lighting and atmospheric detail, with clear visibility of the performers, smokestacks, and stadium architecture."
+   ],
+   "context": {
+    "repeat_group": "repeat/0072.jpg",
+    "repeat_index": 1,
+    "input_max_edge_px": 1536,
+    "prompt_id": "repeat-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:512879bad0252ec29ad7e4d391edf01385595fd0d23599556b7e98df18807e6f",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1214,
+    "output_tokens": 158,
+    "thinking_tokens": 421,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "repeat/000003/00",
+   "photo_id": "0002.jpg",
+   "stage": "repeat",
+   "read_kind": "absolute",
+   "verdict": "accept",
+   "composite": 95,
+   "scores": {
+    "clarity": 95,
+    "composition": 92,
+    "interest": 98,
+    "technical_quality": 94
+   },
+   "reasons": [
+    "High-resolution image with excellent detail and clarity.",
+    "Captures a complex and visually striking scene from the London 2012 Olympics opening ceremony.",
+    "Good dynamic range and color balance despite the challenging stadium lighting.",
+    "The composition effectively conveys the scale of the set design and the atmosphere of the event."
+   ],
+   "context": {
+    "repeat_group": "repeat/0002.jpg",
+    "repeat_index": 0,
+    "input_max_edge_px": 1536,
+    "prompt_id": "repeat-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:512879bad0252ec29ad7e4d391edf01385595fd0d23599556b7e98df18807e6f",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1214,
+    "output_tokens": 157,
+    "thinking_tokens": 386,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "repeat/000003/01",
+   "photo_id": "0002.jpg",
+   "stage": "repeat",
+   "read_kind": "absolute",
+   "verdict": "accept",
+   "composite": 95,
+   "scores": {
+    "clarity": 9,
+    "composition": 9,
+    "interest": 10,
+    "technical_quality": 9
+   },
+   "reasons": [
+    "High resolution and clarity",
+    "Captures a significant cultural event (London 2012 Opening Ceremony)",
+    "Excellent composition showing the scale of the set",
+    "Good lighting and color balance"
+   ],
+   "context": {
+    "repeat_group": "repeat/0002.jpg",
+    "repeat_index": 1,
+    "input_max_edge_px": 1536,
+    "prompt_id": "repeat-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:512879bad0252ec29ad7e4d391edf01385595fd0d23599556b7e98df18807e6f",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1214,
+    "output_tokens": 131,
+    "thinking_tokens": 442,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "repeat/000004/00",
+   "photo_id": "0008.jpg",
+   "stage": "repeat",
+   "read_kind": "absolute",
+   "verdict": "accept",
+   "composite": 95,
+   "scores": {
+    "clarity": 9,
+    "composition": 9,
+    "lighting": 10,
+    "subject": 10
+   },
+   "reasons": [
+    "Stunning visual display of pyrotechnics with high dynamic range",
+    "Excellent contrast between the golden sparks and the deep blue stadium lighting",
+    "Sharp focus on the falling sparks despite the challenging low-light environment",
+    "Iconic and well-composed shot of a major cultural event"
+   ],
+   "context": {
+    "repeat_group": "repeat/0008.jpg",
+    "repeat_index": 0,
+    "input_max_edge_px": 1536,
+    "prompt_id": "repeat-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:512879bad0252ec29ad7e4d391edf01385595fd0d23599556b7e98df18807e6f",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1214,
+    "output_tokens": 147,
+    "thinking_tokens": 575,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "repeat/000004/01",
+   "photo_id": "0008.jpg",
+   "stage": "repeat",
+   "read_kind": "absolute",
+   "verdict": "accept",
+   "composite": 95,
+   "scores": {
+    "clarity": 9,
+    "composition": 9,
+    "lighting": 10,
+    "subject_matter": 10
+   },
+   "reasons": [
+    "High-quality capture of a complex pyrotechnic display",
+    "Excellent contrast between the bright sparks and the dark stadium environment",
+    "Iconic imagery from a major global event",
+    "Sharp focus on the falling sparks and the surrounding structure"
+   ],
+   "context": {
+    "repeat_group": "repeat/0008.jpg",
+    "repeat_index": 1,
+    "input_max_edge_px": 1536,
+    "prompt_id": "repeat-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:512879bad0252ec29ad7e4d391edf01385595fd0d23599556b7e98df18807e6f",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1214,
+    "output_tokens": 140,
+    "thinking_tokens": 237,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "repeat/000005/00",
+   "photo_id": "0022.jpg",
+   "stage": "repeat",
+   "read_kind": "absolute",
+   "verdict": "accept",
+   "composite": 95,
+   "scores": {
+    "clarity": 95,
+    "composition": 92,
+    "lighting": 90,
+    "relevance": 100
+   },
+   "reasons": [
+    "High-quality, clear image of the London 2012 Olympic Bell during the opening ceremony.",
+    "Excellent contextual framing showing the stage, performers, and the audience.",
+    "The image is well-exposed despite the complex indoor stadium lighting.",
+    "Significant historical and cultural value."
+   ],
+   "context": {
+    "repeat_group": "repeat/0022.jpg",
+    "repeat_index": 0,
+    "input_max_edge_px": 1536,
+    "prompt_id": "repeat-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:512879bad0252ec29ad7e4d391edf01385595fd0d23599556b7e98df18807e6f",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1214,
+    "output_tokens": 151,
+    "thinking_tokens": 360,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "repeat/000005/01",
+   "photo_id": "0022.jpg",
+   "stage": "repeat",
+   "read_kind": "absolute",
+   "verdict": "accept",
+   "composite": 95,
+   "scores": {
+    "clarity": 95,
+    "composition": 92,
+    "historical_significance": 100,
+    "technical_quality": 90
+   },
+   "reasons": [
+    "High-resolution image with excellent detail on the Olympic Bell and the surrounding stage.",
+    "Captures a significant historical moment from the 2012 London Olympics opening ceremony.",
+    "The composition effectively balances the large-scale subject (the bell) with the human elements on stage and the crowd in the background.",
+    "Lighting is well-managed for a complex indoor stadium environment."
+   ],
+   "context": {
+    "repeat_group": "repeat/0022.jpg",
+    "repeat_index": 1,
+    "input_max_edge_px": 1536,
+    "prompt_id": "repeat-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:512879bad0252ec29ad7e4d391edf01385595fd0d23599556b7e98df18807e6f",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1214,
+    "output_tokens": 174,
+    "thinking_tokens": 588,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "repeat/000006/00",
+   "photo_id": "0015.jpg",
+   "stage": "repeat",
+   "read_kind": "absolute",
+   "verdict": "accept",
+   "composite": 95,
+   "scores": {
+    "clarity": 9,
+    "composition": 9,
+    "interest": 10,
+    "technical": 9
+   },
+   "reasons": [
+    "High clarity and focus on the subject.",
+    "Iconic background of the London 2012 Olympic Opening Ceremony.",
+    "Strong emotional expression.",
+    "Well-balanced composition."
+   ],
+   "context": {
+    "repeat_group": "repeat/0015.jpg",
+    "repeat_index": 0,
+    "input_max_edge_px": 1536,
+    "prompt_id": "repeat-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:512879bad0252ec29ad7e4d391edf01385595fd0d23599556b7e98df18807e6f",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1214,
+    "output_tokens": 125,
+    "thinking_tokens": 476,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "repeat/000006/01",
+   "photo_id": "0015.jpg",
+   "stage": "repeat",
+   "read_kind": "absolute",
+   "verdict": "accept",
+   "composite": 95,
+   "scores": {
+    "clarity": 9,
+    "composition": 9,
+    "context": 10,
+    "emotion": 10
+   },
+   "reasons": [
+    "The image is high-quality with a clear subject and sharp focus.",
+    "The background provides iconic context, specifically the London 2012 Olympic Opening Ceremony set.",
+    "The subject's expression is highly expressive and well-captured.",
+    "The composition effectively uses the foreground subject against the vast stadium background."
+   ],
+   "context": {
+    "repeat_group": "repeat/0015.jpg",
+    "repeat_index": 1,
+    "input_max_edge_px": 1536,
+    "prompt_id": "repeat-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:512879bad0252ec29ad7e4d391edf01385595fd0d23599556b7e98df18807e6f",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1214,
+    "output_tokens": 153,
+    "thinking_tokens": 772,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "repeat/000007/00",
+   "photo_id": "0016.jpg",
+   "stage": "repeat",
+   "read_kind": "absolute",
+   "verdict": "accept",
+   "composite": 95,
+   "scores": {
+    "clarity": 9,
+    "composition": 8,
+    "context": 10,
+    "safety": 10
+   },
+   "reasons": [
+    "High quality image with clear focus on the subject.",
+    "Unique and interesting background showing the London 2012 Olympic Opening Ceremony set.",
+    "Well-lit and properly exposed."
+   ],
+   "context": {
+    "repeat_group": "repeat/0016.jpg",
+    "repeat_index": 0,
+    "input_max_edge_px": 1536,
+    "prompt_id": "repeat-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:512879bad0252ec29ad7e4d391edf01385595fd0d23599556b7e98df18807e6f",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1214,
+    "output_tokens": 125,
+    "thinking_tokens": 515,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "repeat/000007/01",
+   "photo_id": "0016.jpg",
+   "stage": "repeat",
+   "read_kind": "absolute",
+   "verdict": "accept",
+   "composite": 95,
+   "scores": {
+    "clarity": 9,
+    "composition": 8,
+    "interest": 10,
+    "lighting": 9
+   },
+   "reasons": [
+    "The image is sharp and well-exposed with a clear subject.",
+    "The background is highly detailed and provides a unique, recognizable context (London 2012 Olympic Opening Ceremony set).",
+    "The composition effectively balances the foreground subject with the expansive stadium environment.",
+    "Technical quality is high with no significant artifacts or noise."
+   ],
+   "context": {
+    "repeat_group": "repeat/0016.jpg",
+    "repeat_index": 1,
+    "input_max_edge_px": 1536,
+    "prompt_id": "repeat-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:512879bad0252ec29ad7e4d391edf01385595fd0d23599556b7e98df18807e6f",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1214,
+    "output_tokens": 155,
+    "thinking_tokens": 541,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "repeat/000008/00",
+   "photo_id": "0019.jpg",
+   "stage": "repeat",
+   "read_kind": "absolute",
+   "verdict": "accept",
+   "composite": 95,
+   "scores": {
+    "clarity": 95,
+    "composition": 92,
+    "detail": 96,
+    "interest": 94
+   },
+   "reasons": [
+    "The image is exceptionally clear and well-composed, featuring a rich, detailed pastoral scene.",
+    "The lighting is natural and consistent across the frame.",
+    "The subjects (people in period clothing, geese, water wheel) are sharp and provide a strong narrative element.",
+    "The background elements like the beehives and the circular earthwork add depth and complexity to the scene."
+   ],
+   "context": {
+    "repeat_group": "repeat/0019.jpg",
+    "repeat_index": 0,
+    "input_max_edge_px": 1536,
+    "prompt_id": "repeat-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:512879bad0252ec29ad7e4d391edf01385595fd0d23599556b7e98df18807e6f",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1188,
+    "output_tokens": 166,
+    "thinking_tokens": 328,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  },
+  {
+   "record_id": "repeat/000008/01",
+   "photo_id": "0019.jpg",
+   "stage": "repeat",
+   "read_kind": "absolute",
+   "verdict": "accept",
+   "composite": 92,
+   "scores": {
+    "clarity": 95,
+    "composition": 90,
+    "interest": 90,
+    "technical_quality": 92
+   },
+   "reasons": [
+    "Excellent clarity and detail throughout the frame, capturing fine textures in the costumes and environment.",
+    "Rich, complex scene with interesting historical/period elements and multiple focal points.",
+    "Good color palette and soft, naturalistic lighting.",
+    "Unique subject matter depicting a highly detailed film set or historical recreation."
+   ],
+   "context": {
+    "repeat_group": "repeat/0019.jpg",
+    "repeat_index": 1,
+    "input_max_edge_px": 1536,
+    "prompt_id": "repeat-v1",
+    "model": "gemini-3-flash-preview",
+    "settings_fingerprint": "sha256:512879bad0252ec29ad7e4d391edf01385595fd0d23599556b7e98df18807e6f",
+    "currency": "USD"
+   },
+   "usage": {
+    "input_tokens": 1188,
+    "output_tokens": 153,
+    "thinking_tokens": 788,
+    "calls": 1
+   },
+   "source": {
+    "tool": "cull-audit-reference",
+    "tool_version": "0.1.0.dev0"
+   }
+  }
+ ]
+}
