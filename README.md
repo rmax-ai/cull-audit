@@ -168,16 +168,48 @@ are **unknown**. Known and estimated totals stay separate, and missing cost
 is never silently treated as zero. Token totals preserve input, output, and
 thinking categories separately.
 
-## 5. Reference runner status
+## 5. Optional reference image runner
 
-The reference multi-pass runner is an **M2 roadmap item**. It does not exist
-in this M1 release, so there is no `reference` command or undocumented flag to
-copy. The current `validate`, `audit`, and `demo` commands do not contact a
-model provider and do not require an API key.
+The reference runner is an opt-in Gemini workflow. It prepares deterministic
+contact sheets and reads, then writes generic judgment records that can be
+validated and audited like records from any other culler. Use your own key;
+the runner never accepts an API key as a command-line argument:
 
-If an M2 reference adapter is built, it will be an opt-in, documented
-bring-your-own-key workflow. It must remain separate from the provider-neutral
-import and audit path. Until then, use records exported by your own tool.
+```bash
+export CULL_AUDIT_GEMINI_API_KEY='your-key'
+cull-audit reference run \
+  --photos path/to/photos \
+  --output tmp/reference \
+  --model gemini-2.5-flash \
+  --passes triage,dedicated,face,repeat \
+  --finalists 12 \
+  --repeat-top 3
+```
+
+Run the plan first without a key or network request:
+
+```bash
+cull-audit reference run \
+  --photos path/to/photos \
+  --output tmp/reference-plan \
+  --model gemini-2.5-flash \
+  --dry-run
+```
+
+The command writes `judgments.json`, deterministic prepared inputs under
+`prepared/`, and redacted raw provider response attempts under `responses/`.
+`--finalists` selects the highest triage composites with photo-ID tie-breaks;
+`--repeat-top` selects the highest dedicated composites. `validate` uses the
+same judgment contract validation as the runner.
+
+Only a non-dry `reference run` contacts Gemini. `validate`, `audit`, `demo`,
+photo discovery, and local image preparation make no network requests or
+telemetry calls. The reference run sends the selected photos to the provider,
+so review the output and privacy implications before sharing it.
+
+There are no pricing claims or live price lookups. The API usage reported by
+Gemini is retained in each judgment record when supplied; any provider charge
+is the user's responsibility under the user's own key.
 
 ## 6. Data contracts and producer integration
 
@@ -213,6 +245,7 @@ The repository's build plan contains the full contract and metric rationale:
 M1 is local-first:
 
 - `validate`, `audit`, and `demo` make no network requests or telemetry calls;
+  only the opt-in non-dry `reference run` contacts Gemini;
 - `demo` is image-free and keyless;
 - photos are opened read-only when local discovery is requested;
 - source files are not moved, renamed, deleted, rated, or rewritten;
@@ -223,8 +256,8 @@ M1 is local-first:
 Treat judgment records, filenames, reasons, and reports as potentially
 sensitive. Review artifacts before sharing them. Use a temporary output
 directory when working with private shoots, and do not commit private
-records or photos. The future reference runner must be reviewed separately
-before it is trusted with a key or image.
+records or photos. Review reference-run artifacts separately before sharing
+them with anyone.
 
 ## 8. Reproducibility and the future open demo
 

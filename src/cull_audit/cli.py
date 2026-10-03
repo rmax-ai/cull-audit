@@ -10,6 +10,7 @@ Exit codes:
 
 import argparse
 import json
+import os
 from pathlib import Path
 import sys
 from typing import Sequence
@@ -19,6 +20,18 @@ from .audit import AuditContractError, AuditIOError, run_audit
 from .contracts import JudgmentRecord, ValidationIssue
 from .demo import run_demo
 from .ingest import ingest
+from .reference.gemini import API_KEY_ENV, GeminiConfigurationError
+from .reference.images import ImagePreparationError
+from .reference.passes import (
+    DEFAULT_FINALISTS,
+    DEFAULT_REPEAT_TOP,
+    PASS_NAMES,
+    ReferenceConfigurationError,
+    ReferenceContractError,
+    ReferenceIOError,
+    ReferenceProviderError,
+    run_reference,
+)
 
 EXIT_SUCCESS = 0
 EXIT_USAGE = 2
@@ -47,6 +60,34 @@ def build_parser() -> argparse.ArgumentParser:
     audit.add_argument("--strict", action="store_true")
     demo = subparsers.add_parser("demo")
     demo.add_argument("--output", required=True, metavar="DIR")
+    reference = subparsers.add_parser("reference")
+    reference_subparsers = reference.add_subparsers(
+        dest="reference_command",
+        required=True,
+    )
+    reference_run = reference_subparsers.add_parser("run")
+    reference_run.add_argument("--photos", required=True, metavar="DIR")
+    reference_run.add_argument("--output", required=True, metavar="DIR")
+    reference_run.add_argument("--model", required=True, metavar="NAME")
+    reference_run.add_argument(
+        "--passes",
+        default=",".join(PASS_NAMES),
+        metavar="NAMES",
+        help="comma-separated passes: triage,dedicated,face,repeat",
+    )
+    reference_run.add_argument(
+        "--finalists",
+        type=int,
+        default=DEFAULT_FINALISTS,
+        metavar="N",
+    )
+    reference_run.add_argument(
+        "--repeat-top",
+        type=int,
+        default=DEFAULT_REPEAT_TOP,
+        metavar="N",
+    )
+    reference_run.add_argument("--dry-run", action="store_true")
     return parser
 
 
@@ -129,6 +170,52 @@ def _demo(args: argparse.Namespace) -> int:
     return EXIT_SUCCESS
 
 
+def _reference_run(args: argparse.Namespace) -> int:
+    """Run the opt-in provider-backed reference image workflow."""
+
+    passes = tuple(item.strip() for item in args.passes.split(",") if item.strip())
+    if not args.dry_run and not os.environ.get(API_KEY_ENV):
+        print(
+            f"error: {API_KEY_ENV} must be set for a non-dry reference run",
+            file=sys.stderr,
+        )
+        return EXIT_CONTRACT
+    try:
+        result = run_reference(
+            args.photos,
+            output=args.output,
+            model=args.model,
+            passes=passes,
+            finalists=args.finalists,
+            repeat_top=args.repeat_top,
+            dry_run=args.dry_run,
+        )
+    except (ReferenceConfigurationError, ReferenceContractError, GeminiConfigurationError) as exc:
+        print(f"error: {exc}", file=sys.stderr)
+        return EXIT_CONTRACT
+    except (ReferenceIOError, ImagePreparationError) as exc:
+        print(f"error: {exc}", file=sys.stderr)
+        return EXIT_IO
+    except ReferenceProviderError as exc:
+        print(f"error: {exc}", file=sys.stderr)
+        return EXIT_PROVIDER
+
+    if result.dry_run:
+        print(f"Dry run: {len(result.planned_calls)} provider call(s), no HTTP requests sent")
+        for index, planned in enumerate(result.planned_calls, 1):
+            photo_ids = ", ".join(planned.photo_ids)
+            print(
+                f"{index:03d}: pass={planned.pass_name} "
+                f"prompt={planned.prompt_id} photos={photo_ids} "
+                f"prepared_bytes={planned.image_bytes}"
+            )
+        return EXIT_SUCCESS
+    if result.judgments_path is not None:
+        print(f"Wrote {result.judgments_path}")
+    print(f"Completed {len(result.records)} judgment record(s)")
+    return EXIT_SUCCESS
+
+
 def main(argv: Sequence[str] | None = None) -> int:
     """Parse arguments and dispatch commands."""
     args = build_parser().parse_args(argv)
@@ -138,4 +225,6 @@ def main(argv: Sequence[str] | None = None) -> int:
         return _audit(args)
     if args.command == "demo":
         return _demo(args)
+    if args.command == "reference" and args.reference_command == "run":
+        return _reference_run(args)
     return EXIT_USAGE
