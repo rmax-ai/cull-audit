@@ -1,0 +1,36 @@
+{
+  "entries": [
+    {
+      "path": "alpha/duplicate-a.png",
+      "sha256": "d1adec87d770dfb29dec4c6f1a929c7984f1795168293e6565835ccd48aa3cfb",
+      "size": 69,
+      "duplicate": true
+    },
+    {
+      "path": "alpha/nested/duplicate-b.PNG",
+      "sha256": "d1adec87d770dfb29dec4c6f1a929c7984f1795168293e6565835ccd48aa3cfb",
+      "size": 69,
+      "duplicate": true
+    },
+    {
+      "path": "hidden/only.JpG",
+      "sha256": "779658560d2df84d1db4d8fb23a9553f1f4520becaa1242d827bce79e5415e99",
+      "size": 416,
+      "duplicate": false
+    }
+  ],
+  "unreadable": [
+    {
+      "path": "corrupt/CORRUPT.PnG",
+      "sha256": "2aade9c49b9414c70f452b226271ef5066e2894cdd0557f54857819fb7bcc782",
+      "size": 9,
+      "corrupt": true
+    }
+  ],
+  "duplicate_groups": [
+    [
+      "alpha/duplicate-a.png",
+      "alpha/nested/duplicate-b.PNG"
+    ]
+  ]
+}
