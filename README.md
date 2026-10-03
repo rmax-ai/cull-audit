@@ -262,7 +262,8 @@ them with anyone.
 ## 8. Open demo
 
 The open-photo demo is a coherent Wikimedia Commons event set; its manifest is the authority and images are not committed. See [`examples/open-demo/README.md`](examples/open-demo/README.md) for licensing, attribution, and reproducible acquisition.
-A visual study page with diagrams and the actual flip photos: https://rmax-ai.github.io/cull-audit/ .
+A visual study page with diagrams and the actual flip photos: https://rmax.ai/cull-audit/ .
+
 ```bash
 python tools/open_demo_fetch.py report --manifest examples/open-demo/manifest.json
 python tools/open_demo_fetch.py fetch --manifest examples/open-demo/manifest.json --out /tmp/cull-audit-open-demo
